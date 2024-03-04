@@ -1,0 +1,147 @@
+<div class="css-auqgo3">
+  <div class="css-nx4o62">
+    <div class="css-1iefl20">
+      <section role="main" class="css-y1ezbx">
+        <div class="css-146wmq">
+          <span aria-label="Atlassian" role="img" class="css-a3l9jr">
+            <img src="/assets/img/logo-gradient-blue-jira-software.svg" alt="">
+          </span>
+          <div class="css-321lzd">
+            <h5>Đăng nhập để tiếp tục</h5>
+          </div>
+        </div>
+        <div>
+          <span></span>
+          <form id="form-login" class="css-r44k6v">
+            <div class="css-env1z2">
+              <div class="css-cnfgt3">
+                <div class="css-xcejzt">
+                  <div class="css-q5x77e">
+                    <div role="presentation" class="css-1s25hsw">
+                      <input type="email" id="emailAddress" name="emailAddress" [(ngModel)]="user.emailAddress" placeholder="Nhập email của bạn" class="css-1cab8vv" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Nhập Mật Khẩu -->
+              <div class="field-group password-field" [ngClass]="{ 'hidden': !showPassword }">
+                <div class="css-wwk9zm">
+                  <div class="css-xcejzt">
+                    <div class="css-q5x77e">
+                      <div role="presentation" class="css-1s25hsw">
+                        <input type="{{ showPassword ? 'text' : 'password' }}" id="password" name="password" [(ngModel)]="user.password" placeholder="Nhập mật khẩu của bạn" class="css-1cab8vv" />
+                      </div>
+                    </div>
+                  </div>
+                  <span class="css-g42x0s">
+                    <span aria-hidden="true" class="css-snhnyn">
+                      <span nz-icon nzType="eye" nzTheme="outline" (click)="togglePasswordVisibility()"></span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <button  class="css-1w9zxjf css-1edgkow" (click)="login()" type="submit">
+              <span class="css-178ag6o">Tiếp tục</span>
+            </button>
+            <div class="hidden css-cnfgt3">
+              <button id="passwordless-button" aria-busy="false" class="css-8x8i7r css-q2jxx8" tabindex="0" type="button">
+                <span class="css-bwxjrz">
+                  <span role="img" aria-label="email" class="css-snhnyn" style=" --icon-primary-color: currentColor; --icon-secondary-color: var(--ds-surface, #ffffff);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                      <g fill="currentColor" fill-rule="evenodd">
+                        <path
+                          d="M5 7v10h14V7H5zm14-2c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2h14z"
+                          fill-rule="nonzero">
+                        </path>
+                        <path
+                          d="M5.498 6.5H3.124c.149.44.399.854.75 1.205l5.882 5.881a3.117 3.117 0 004.41 0l5.882-5.881c.35-.351.6-.765.749-1.205h-2.373l-5.672 5.672a1.119 1.119 0 01-1.583 0L5.498 6.5z">
+                        </path>
+                      </g>
+                    </svg>
+                  </span>
+                </span>
+                <span class="css-178ag6o">Đăng nhập bằng email</span>
+                <span class="css-bwxjrz">
+                  <span style="width: 24px"></span>
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="google-login social-login css-1n7nx3r">
+        <span class="css-1n7nx3r-before">Hoặc tiếp tục với:</span>
+        <div class="css-1vymulm">
+          <div class="css-1vymulm">
+            <button id="google-auth-button" aria-busy="false" class="css-8x8i7r css-q2jxx8" tabindex="0"type="button">
+              <span class="css-bwxjrz">
+                <img src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.519/google-logo.5867462c.svg" alt="" />
+              </span>
+              <span class="css-178ag6o">Google</span>
+            </button>
+          </div>
+          <div class="css-1vymulm">
+            <button id="microsoft-auth-button" aria-busy="false" class="css-8x8i7r css-q2jxx8" tabindex="0"type="button">
+              <span class="css-bwxjrz">
+                <img src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.519/microsoft-logo.c73d8dca.svg"alt="" />
+              </span>
+              <span class="css-178ag6o">Microsoft</span>
+            </button>
+          </div>
+        </div>
+        <div class="css-1vymulm">
+          <div class="css-1vymulm">
+            <button id="apple-auth-button" aria-busy="false" class="css-8x8i7r css-q2jxx8" tabindex="0" type="button">
+              <span class="css-bwxjrz">
+                <img src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.519/apple-logo.54e0d711.svg" alt="" />
+              </span>
+              <span class="css-178ag6o">Apple</span>
+            </button>
+          </div>
+          <div class="css-1vymulm">
+          <button id="slack-auth-button" aria-busy="false" class="css-8x8i7r css-q2jxx8" tabindex="0" type="button">
+            <span class="css-bwxjrz">
+              <img src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.519/slack-logo.5d730c10.svg" alt="" />
+            </span>
+            <span class="css-178ag6o">Slack</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="css-9bikgd">
+      <ul>
+        <li>
+          <a id="resetPassword" routerLink="/user/project">Bạn không đăng nhập được?</a>
+        </li>
+        <p class="css-1x34ed1">•</p>
+        <li>
+          <a id="signup" class="primary-action" routerLink="/user/signup">Tạo tài khoản</a>
+        </li>
+      </ul>
+    </div>
+    <div class="css-pj36kz"></div>
+    <div class="css-q9nxjt">
+      <footer class="css-1tn479n">
+        <span aria-label="Atlassian" role="img" class="css-1eu9lrx" style="--logo-color: inherit; --logo-fill: currentColor">
+          <img src="/assets/img/jira-software-logo-gradient-blue-attribution_rgb@2x.png" alt="">
+        </span>
+        <div class="css-ftz4sr"> Một tài khoản cho Jira, Confluence, Trello và
+          <a id="atlassian-account-link-more-short" target="_blank" rel="noreferrer noopener" class="css-1gc25jr">sản phẩm khác</a>.
+        </div>
+      </footer>
+      <ul class="fine-print">
+        <li>
+          <a target="_blank" rel="noreferrer noopener" class="css-1gc25jr">Chính sách quyền riêng tư</a>
+        </li>
+        <p class="css-1x34ed1">•</p>
+        <li>
+          <a target="_blank" rel="noreferrer noopener" class="css-1gc25jr">Lưu ý dành cho người dùng</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+</div>
+</div>
+<nz-alert *ngIf="loginSuccess" nzType="success" nzMessage="Đăng nhập tài khoản thành công" nzShowIcon></nz-alert>
+<nz-alert *ngIf="loginError" nzType="error" nzMessage="Đăng nhập tài khoản không thành công" nzShowIcon></nz-alert>

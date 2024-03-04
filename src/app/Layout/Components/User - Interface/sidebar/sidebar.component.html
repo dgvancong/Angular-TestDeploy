@@ -1,0 +1,93 @@
+<div class="sidebar" [ngClass]="{ 'collapsed': isCollapsed }" (click)="toggleSidebar()">
+  <nav class="navigation">
+    <section>
+      <div class="_1yt4zamj _1e0c1txw _1bah1yb4 _zulpu2gc _4cvr1h6o _1tke1tcg _vchhusvi">
+        <div class="_syaz1kw7 _19pkidpf _1wyb7vkz _k48pni7l _1dyzqdok _vwz4gktf">Dự án</div>
+        <div>
+          <div role="presentation">
+            <button aria-busy="false" class="_2rko1njd _1pbykb7n css-c6disx" tabindex="0" type="button" aria-describedby="11val-tooltip">
+              <span class="css-bwxjrz">
+                <span role="img" class="css-1wits42">
+                  <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                    <path d="M13 11V7a1 1 0 00-2 0v4H7a1 1 0 000 2h4v4a1 1 0 002 0v-4h4a1 1 0 000-2h-4z" fill="currentColor" fill-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="_1e0c1txw _2lx21bp4 _18s83l1n _onzypxbi">
+          <span class="_syazu22k _1e0c1txw _19pkidpf _2hwxidpf _otyridpf _18u0idpf _1yt4otz2 _4cvr1h6o _80omtlke _1p1dangw _1wyb1crf _k48pni7l _1dyzidpf _vwz47vkz">
+            <button class="_2hwxv77o css-8vysra" tabindex="0" type="button">
+              <span class="css-18kgcs9">
+                <div class="_v5641b1u _k8m01e03 _t9ec1ul7">
+                  <span role="img" aria-label="Collapse Recent projects" class="css-snhnyn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                      <path d="M8.292 10.293a1.009 1.009 0 000 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 000-1.419.987.987 0 00-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 00-1.406 0z" fill="currentColor" fill-rule="evenodd"> </path>
+                    </svg>
+                  </span>
+                </div>
+              </span>
+            </button> Gần đây
+          </span>
+          <div id="multi-project-menu-project-group-recent" class="_1reo15vq _18m915vq _v564plo1 _c71ln7od">
+            <div>
+              <ol class="_1yt41b66 _19pkidpf _2hwxidpf _otyridpf _18u0idpf _qtt8glyw">
+                <li *ngFor="let project of projects">
+                  <div class="_2rko1l7b _bfhk13cp">
+                    <div class="_1e0c1txw _4cvr1h6o _2rko1l7b _4t3i1ylp _v5649dqc _irr3kz9i _7gg8jdj5 _7ih6kb7n _1bqoyh40 _rhjqnqa1 _boy0yh40 _i9oi194a _ylp5kz9i _gnguyh40 _1bv6nqa1 _ygb3yh40 _1qtp194a _sbojkz9i">
+                      <a [routerLink]="['/user/project-id/'+ project.projectID]" class="_16jlkb7n _1o9zkb7n _i0dlf1ug _1ul9idpf _1yt4u2gc _1e0c1txw _4cvr1h6o _syazkwex _1q5t1r31 _nt751r31 _mizu1r31 _1dit1r31 _1ohyglyw _49pcglyw _ra3xglyw _ksodglyw _1r9x1o36 _1hvw1o36 _128m1o36 _4hz81o36 _180dglyw _7ehiglyw _1ejjglyw _1dbzglyw _1nrm18uv _1a3b18uv _vjfr18uv _9oik18uv _c2waglyw _4fprglyw _10xfglyw _1bnxglyw _1iohnqa1 _5goinqa1 _1w0vnqa1 _jf4cnqa1 _9h8h1c2q _f8pj1c2q _v0vw1c2q _30l31c2q">
+                        <img src="/assets/img/10418.svg" alt="" class="_16jlidpf _1o9zidpf _i0dl1wug _vchhusvi _4t3i1tcg _1bsb1tcg _2hwxutpp _2rko1l7b">
+                        <span class="_16jlkb7n _1o9zkb7n _i0dlf1ug _1reo15vq _18m915vq _y3gn1e5h _1e0c1ule _o5721q9c _1bto1l2s _k48pbfng">{{ project.projectName }}</span>
+                      </a>
+                      <div class="_16jlidpf _1o9zidpf _i0dl1wug _1bsbgrf3 _tzy4idpf _2hwxu2gc _195pjdj5 _1mygkb7n">
+                        <div class="_1yt4v77o _1reo15vq _18m915vq">
+                          <div role="presentation">
+                            <button class="_1e0c1txw _4cvr1h6o _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _19itglyw _11q7glyw _80omtlke _2rko1l7b _1spjglyw _157zglyw _syazu22k _1o4dglyw _skp0glyw _1wqmglyw">
+                              <span role="img" aria-label="Add to Starred" class="css-snhnyn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                  <path d="M12 16.373l3.98 2.193-.76-4.655 3.276-3.347-4.524-.69L12 5.687l-1.972 4.189-4.524.689L8.78 13.91l-.762 4.655L12 16.373zm0 2.283l-3.016 1.662a2 2 0 01-2.939-2.075l.599-3.656-2.57-2.624a2 2 0 011.129-3.377l3.47-.528 1.518-3.224a2 2 0 013.618 0l1.519 3.224 3.47.528a2 2 0 011.127 3.377l-2.569 2.624.599 3.656a2 2 0 01-2.94 2.075L12 18.656z" fill="currentColor"></path>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="_1e0c1txw _4cvr1h6o _2rko1l7b _4t3i1ylp _v5649dqc _irr3kz9i _7gg8jdj5 _7ih6kb7n _1bqoyh40 _rhjqnqa1 _boy0yh40 _i9oi194a _ylp5kz9i _gnguyh40 _1bv6nqa1 _ygb3yh40 _1qtp194a _sbojkz9i">
+                    <a class="_16jlkb7n _1o9zkb7n _i0dlf1ug _1ul9idpf _1yt4u2gc _1e0c1txw _4cvr1h6o _syazkwex _1q5t1r31 _nt751r31 _mizu1r31 _1dit1r31 _1ohyglyw _49pcglyw _ra3xglyw _ksodglyw _1r9x1o36 _1hvw1o36 _128m1o36 _4hz81o36 _180dglyw _7ehiglyw _1ejjglyw _1dbzglyw _1nrm18uv _1a3b18uv _vjfr18uv _9oik18uv _c2waglyw _4fprglyw _10xfglyw _1bnxglyw _1iohnqa1 _5goinqa1 _1w0vnqa1 _jf4cnqa1 _9h8h1c2q _f8pj1c2q _v0vw1c2q _30l31c2q" routerLink="/user/project-views">
+                      <span class="_o5721q9c _1reo15vq _18m915vq _1bto1l2s _k48p1nn1">Xem tất cả dự án</span>
+                    </a>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </nav>
+  <div class="_1e0c1txw _2lx21bp4 _4cvr1h6o _18s8u2gc">
+    <div class="_1wyb1skh _y3gn1h6o _18s8swc3 _1tke7vkz _syazu22k">Bạn đang tham gia một dự án do nhóm quản lý</div>
+    <button class="css-g08w6q" type="button">
+      <span class="css-4h66kx">
+        <span class="css-1wits42">
+          <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+            <path
+              d="M10.922 14.517L5.87 12.68l-.932-.339C4.418 12.151 4 11.552 4 11c0-.556.42-1.153.938-1.341l9.124-3.318c.52-.19.938.105.938.654v8.01c0 .54-.42.842-.938.654l-3.14-1.142zM6 14.227l2 .728V17c0 .552-.405 1.202-.895 1.447l-.21.106C6.4 18.8 6 18.549 6 18.009v-3.782zm11.224-4.78a.5.5 0 11-.448-.894l2-1a.5.5 0 11.448.894l-2 1zm-.448 4a.5.5 0 01.448-.894l2 1a.5.5 0 01-.448.894l-2-1zM17 11.5a.5.5 0 110-1h3a.5.5 0 110 1h-3z"
+              fill="currentColor">
+            </path>
+          </svg>
+        </span>
+      </span>
+      <span class="css-178ag6o">
+        <span class="_1wyb1crf">Cung cấp thông tin phản hồi</span>
+      </span>
+    </button>
+  </div>
+</div>

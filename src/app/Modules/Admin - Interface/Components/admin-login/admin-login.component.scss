@@ -1,0 +1,381 @@
+.css-auqgo3 {
+  min-width: 0px;
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+}
+.css-nx4o62 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(250, 251, 252);
+  background-image: url(https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.519/default_left.dfc31853.svg), url(https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/5.0.519/default_right.a801c0cc.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-size: 368px, 368px;
+  background-position: left bottom, right bottom;
+}
+.css-1iefl20 {
+  min-height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 50px 0px;
+}
+.css-y1ezbx {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 400px;
+  padding: 32px 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  box-sizing: border-box;
+  color: rgb(94, 108, 132);
+  height: 500px;
+}
+.css-146wmq {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.css-a3l9jr {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  user-select: none;
+  white-space: normal;
+  height: 40px;
+}
+.css-a3l9jr > img {
+  height: 100%;
+  fill: inherit;
+}
+.css-321lzd {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.css-321lzd h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(23, 43, 77);
+}
+.css-r44k6v {
+  margin: 0px;
+}
+.css-env1z2 {
+  margin-bottom: 30px;
+}
+.css-cnfgt3:first-of-type {
+  margin-top: -8px;
+}
+.css-cnfgt3 {
+  margin-top: 8px;
+  transform-origin: 50% 0px;
+  transition-property: visibility, height, margin-top, opacity, transform;
+  transition-duration: 0s, 0.2s, 0.2s, 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.css-q5x77e {
+  margin-top: 30px;
+}
+.css-1s25hsw {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #FAFBFC;
+  border-color: #DFE1E6;
+  color: #091E42;
+  cursor: text;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 100%;
+  font-size: 14px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s;
+  overflow-wrap: break-word;
+  vertical-align: top;
+  pointer-events: auto;
+  height: 45px;
+}
+.css-1cab8vv:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.css-1cab8vv:not([data-compact]) {
+  padding: 8px 6px;
+  height: 2.57em;
+}
+.css-1cab8vv {
+  background-color: transparent;
+  border: 0px;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: inherit;
+  font-size: 14px;
+  min-width: 0px;
+  outline: none;
+  width: 100%;
+  line-height: 1.42857;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.css-1edgkow {
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  border-width: 0px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: inherit;
+  font-style: normal;
+  font-family: inherit;
+  font-weight: 500;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.1s ease-out 0s, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38) 0s;
+  white-space: nowrap;
+  background: #0052CC;
+  cursor: pointer;
+  height: 2.28571em;
+  line-height: 2.28571em;
+  padding: 0px 10px;
+  vertical-align: middle;
+  width: 100%;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #FFFFFF !important;
+  height: 35px;
+}
+.css-g42x0s {
+  color: rgb(66, 82, 110);
+  height: 24px;
+  width: 24px;
+  float: right;
+  margin-top: -31px;
+  margin-right: 6px;
+  position: relative;
+}
+.css-snhnyn > svg {
+  overflow: hidden;
+  pointer-events: none;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+}
+.css-1w9zxjf div, .css-1w9zxjf span {
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: flex !important;
+}
+.css-178ag6o {
+  opacity: 1;
+  transition: opacity 0.3s ease 0s;
+  margin: 0px 2px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.css-1n7nx3r {
+  margin-top: 24px;
+}
+.css-1vymulm:not(:last-child) {
+  margin-bottom: 16px;
+}
+.css-1vymulm:not(:last-child) {
+  margin-bottom: 16px;
+}
+.css-8x8i7r {
+  box-shadow: none;
+  font-weight: bold;
+  border: 1px solid rgb(193, 199, 208);
+  border-radius: 3px;
+  color: rgb(23, 43, 77);
+  height: 40px !important;
+  line-height: 40px !important;
+  background: rgb(255, 255, 255) !important;
+}
+.css-q2jxx8 {
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  border: 1px solid rgb(193, 199, 208);
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: inherit;
+  font-style: normal;
+  font-family: inherit;
+  font-weight: 500;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.1s ease-out 0s, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38) 0s;
+  white-space: nowrap;
+  background: rgba(9, 30, 66, 0.04);
+  cursor: pointer;
+  height: 2.28571em;
+  line-height: 2.28571em;
+  padding: 0px 10px;
+  vertical-align: middle;
+  width: 100%;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #42526E !important;
+}
+.css-8x8i7r div, .css-8x8i7r span {
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: flex !important;
+}
+.css-bwxjrz {
+  opacity: 1;
+  transition: opacity 0.3s ease 0s;
+  display: flex;
+  margin: 0px 2px;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-self: center;
+  font-size: 0px;
+  line-height: 0;
+  user-select: none;
+}
+.css-8x8i7r span {
+  -webkit-box-flex: unset;
+  flex-grow: unset;
+}
+.css-8x8i7r div, .css-8x8i7r span {
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: flex !important;
+}
+.css-178ag6o {
+  opacity: 1;
+  transition: opacity 0.3s ease 0s;
+  margin: 0px 2px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.css-8x8i7r img {
+  height: 24px;
+  width: 24px;
+  margin-right: 6px;
+}
+.css-1n7nx3r-before {
+  color: rgb(94, 108, 132);
+  content: attr(data-i18n-continue);
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.css-9bikgd {
+  color: rgb(107, 119, 140);
+  margin-top: 24px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+}
+.css-9bikgd ul {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+  cursor: pointer;
+}
+.css-1x34ed1 {
+  margin: 0px 8px;
+}
+.css-q9nxjt {
+  color: rgb(107, 119, 140);
+  padding-top: 16px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 14px;
+}
+.css-1tn479n {
+  background: transparent;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 0px auto;
+  border-top: 1px solid rgb(193, 199, 208);
+  padding-top: 24px;
+  font-size: 11px;
+  color: rgb(23, 43, 77);
+}
+.css-1eu9lrx {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  user-select: none;
+  white-space: normal;
+  height: 24px;
+}
+.css-1eu9lrx > img {
+  height: 100%;
+  fill: inherit;
+}
+.css-ftz4sr {
+  padding-top: 8px;
+}
+.css-1tn479n a {
+  color: rgb(0, 82, 204);
+}
+.css-1gc25jr {
+  color: rgb(23, 43, 77);
+}
+.css-q9nxjt ul {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  list-style: none;
+  padding: 5px;
+}
+.css-1x34ed1 {
+  margin: 0px 8px;
+}
+$focus-color: #007BFF;
+
+.css-1cab8vv {
+  &:focus {
+    border-color: $focus-color;
+    box-shadow: 0 0 0 0.2rem rgba($focus-color, 0.25);
+  }
+}
+a#resetPassword {
+  text-decoration: none;
+}
+nz-alert {
+  margin-top: 16px;
+  float: right;
+}

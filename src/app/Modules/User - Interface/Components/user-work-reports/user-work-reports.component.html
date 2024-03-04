@@ -1,0 +1,5 @@
+<nz-empty [nzNotFoundContent]="noContentTemplate">
+  <ng-container *ngIf="tabContent && tabContent.length > 0">
+    <div *ngFor="let content of tabContent">{{ content }}</div>
+  </ng-container>
+</nz-empty>

@@ -1,0 +1,1249 @@
+<div class="board">
+  <div class="column" (dragover)="onDrapOver($event)" (drop)="onDrop($event,'To Do')">
+    <div class="_154iidpf _uiztglyw _4t3ickbl _1wybdlk8 _pdyk427j _1kt9b3bt _1cs8stnw _19wo1i6y _qnecidpf _oounidpf _kfgtyh40 _dsq4glyw _1rus1wws _59hlidpf _hilggrho _iyyqgrho _1tsagrho _3bdqt94y _at5wt94y _hrqx1tcg _1bcp1tcg _qdka1tcg _ttss1tcg _1ho1u2gc _pg6ou2gc _1pbyegat _kqsw1if8 _80om1qgj _bfhk1j6p _154pidpf">
+      <div class="_syaz1tgx _4cvr1h6o _1bah1e5h _1e0c1txw _4t3i1osq _19bvpxbi _u5f3u2gc _13lii2wt _qrwqi2wt _bfhkhri9">
+        <div
+          class="_1e0c1txw _4cvr1h6o _1kt9mrja _l5lo7vkz _1uak7vkz _is061dl3 _1y8lgktf _kfgtgktf _cfu11txw _19o61h6o _24gj1h6o _wxb0tlke _18u0xmi2 _1bsb1rrh">
+          <div class="_1bsb1zx1">
+            <div class="_1e0c1txw _4cvr1h6o _2iu91osq _d8r5idpf">
+              <div class="css-q5x77ee">
+                <div class="css-1v0cd8t">
+                  <button aria-label="Edit" type="button" class="css-g2hnkr"></button>
+                  <div class="css-u3i0v">
+                    <div
+                      class="_1e0c1txw _4cvr1h6o _16jlidpf _1o9zidpf _i0dl1wug _80om1kw7 _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf">
+                      <span class="css-pxii8w" style="max-width: 100%;">
+                        <span class="css-1341ess">Thực Hiện</span>
+                      </span>
+                      <div class="_19bv1b66 _1p1dangw _k48p1nn1"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="_1e0c1txw _18u01wug _1ul91tcg">
+            <div class="_16jlidpf _1o9zidpf _i0dl1wug _tzy411de">
+              <button class="css-9snh2d" tabindex="0" type="button">
+                <span class="css-bwxjrz">
+                  <span role="img" aria-label="Collapse" class="css-1afrefi">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                      <path
+                        d="M8.062 11L6.5 9.914A1 1 0 017.914 8.5l2.616 2.616c.28.167.47.5.47.884s-.19.717-.47.884L7.914 15.5A1 1 0 116.5 14.086L8.062 13h-3.68c-.487 0-.882-.448-.882-1s.395-1 .882-1h3.68zm5.408 1.884c-.28-.167-.47-.5-.47-.884s.19-.717.47-.884L16.086 8.5A1 1 0 0117.5 9.914L15.938 11h3.68c.487 0 .882.448.882 1s-.395 1-.882 1h-3.68l1.562 1.086a1 1 0 01-1.414 1.414l-2.616-2.616z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <a class="css-9snh2d" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+              <span class="css-bwxjrz">
+                <span role="img" aria-label="Column actions menu" class="css-snhnyn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor" fill-rule="evenodd">
+                      <circle cx="5" cy="12" r="2"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                      <circle cx="19" cy="12" r="2"></circle>
+                    </g>
+                  </svg>
+                </span>
+              </span>
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu>
+                <div class="css-xhdqsk">Hành Động</div>
+                <li nz-menu-item><span nz-icon nzType="translation" nzTheme="outline" style="margin: 10px;"></span>Đổi
+                  Tên</li>
+                <li nz-menu-item><span nz-icon nzType="clear" nzTheme="outline" style="margin: 10px;"></span>Xóa Bảng
+                </li>
+              </ul>
+            </nz-dropdown-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="tasks">
+      <li style="height: 92px;" class="task" draggable="true" *ngFor="let item of filterTickets('To Do')"
+        (dragstart)="onDragStart(item)" (click)="showModal(item)">
+        {{item.taskType}}
+        <div class="css-24zxcb">
+          <div class="_1e0c1txw _1bsb1ogy _1reo15vq _18m915vq">
+            <div class="_1e0c1txw _4cvr1h6o _1yt4swc3 _1c30otz2 _16jlkb7n _1o9zkb7n _i0dlf1ug _1reo15vq _18m915vq">
+              <span class="_2hwx1b66">
+                <div class="_1e0c1txw _1bah1h6o _2lx21bp4">
+                  <div role="presentation">
+                    <img class="sc-1j9o0vm-0 dMMVlq" src="/assets/avatar/10318.svg"></div>
+                </div>
+              </span>
+              <div class="_16jlidpf _1o9zkb7n _i0dl1wug _1eim1xrj _o5721q9c _1reo15vq _18m915vq _1e38mo4m">
+                <div role="presentation">
+                  <a class="sc-15cfu5s-0 kshFWQ" href="#">
+                    <span class="_1e0c1ule _1reo15vq _18m915vq _1bto1l2s _1wyb1crf _k48pni7l _syaz1o15">{{item.projectKey}}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="_1e0c1txw _4cvr1h6o _1yt4swc3 _1c30otz2">
+              <div class="_1e0c1txw _1bah1h6o _4cvr1h6o _vwz4kb7n">
+                <div role="presentation">
+                  <span class="sc-14a1bu-0 fgIYuo">
+                    <svg height="16" width="16" viewBox="0 0 24 24" role="presentation">
+                      <path d="M6.735 12.322a1 1 0 00-1.47 1.356l3.612 3.919c.537.526 1.337.526 1.834.03l.364-.359a2335.638 2335.638 0 003.939-3.883l.04-.04a492.598 492.598 0 003.658-3.643 1 1 0 00-1.424-1.404 518.42 518.42 0 01-3.64 3.625l-.04.04a2049.114 2049.114 0 01-3.775 3.722l-3.098-3.363z" fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="_1e0c1txw _1bah1h6o _4cvr1h6o">
+                <div role="presentation">
+                  <img class="up9zoy-0 eYnrAP" alt="Medium" src="/assets/avatar/medium.svg">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li *ngIf="showInput" class="task">
+        <div class="form-container">
+          <form class="_1e0c1txw _4cvr1h6o" (keyup.enter)="createNewTask()" name="taskForm">
+            <div
+              class="_kqswh2mm _1e0c1txw _2lx21bp4 _4cvrv2br _1yt4utpp _12ji1r31 _1qu2glyw _12y31o36 _16qs1gk3 _vchhusvi _1bsb1osqq _bfhkvuon _v56416gf _2rko1l7b _4t3i1wug">
+              <div class="_1e0c1txw _1bah1h6o _4cvr1h6o _16jlkb7n _1bsb1osq">
+                <div class="_1e0c1txw _16jlkb7n _1bahv2br _4cvr1h6o _otyrftgi">
+                  <div class="sc-1wqp2jw-0 kOjind"></div>
+                  <textarea class="sc-6zxco2-0 khtgHj" placeholder="What needs to be done?" rows="2" maxlength="255"
+                    tabindex="0" [(ngModel)]="newTaskName" name="taskInput"></textarea>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+
+      <div
+        class="_kqsw1if8 _94n5idpf _154igt9g _19pkidpf _bfhkhri9 _mrkbi2wt _1o0zi2wt _1pbyidpf _2hwx1lpd _otyr1lpd _18u01lpd">
+        <div>
+          <div class="sc-9c0crn-0 lhlKHB" *ngIf="!showInput">
+            <div class="sc-9c0crn-1 gUFtZR">
+              <button class="css-a25ue6" type="button">
+                <span class="css-4h66kx">
+                  <span aria-hidden="true" class="css-1wits42">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                      <path
+                        d="M13 11V3.993A.997.997 0 0012 3c-.556 0-1 .445-1 .993V11H3.993A.997.997 0 003 12c0 .557.445 1 .993 1H11v7.007c0 .548.448.993 1 .993.556 0 1-.445 1-.993V13h7.007A.997.997 0 0021 12c0-.556-.445-1-.993-1H13z"
+                        fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </span>
+                <span class="css-178ag6o">
+                  <span class="_1e0c1ule _y3gn1e5h _1bto1l2s _1reo15vq" (click)="showInput = true">Tạo</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+
+  <div class="column" (dragover)="onDrapOver($event)" (drop)="onDrop($event,'In Progress')">
+    <div class="_154iidpf _uiztglyw _4t3ickbl _1wybdlk8 _pdyk427j _1kt9b3bt _1cs8stnw _19wo1i6y _qnecidpf _oounidpf _kfgtyh40 _dsq4glyw _1rus1wws _59hlidpf _hilggrho _iyyqgrho _1tsagrho _3bdqt94y _at5wt94y _hrqx1tcg _1bcp1tcg _qdka1tcg _ttss1tcg _1ho1u2gc _pg6ou2gc _1pbyegat _kqsw1if8 _80om1qgj _bfhk1j6p _154pidpf">
+      <div class="_syaz1tgx _4cvr1h6o _1bah1e5h _1e0c1txw _4t3i1osq _19bvpxbi _u5f3u2gc _13lii2wt _qrwqi2wt _bfhkhri9">
+        <div
+          class="_1e0c1txw _4cvr1h6o _1kt9mrja _l5lo7vkz _1uak7vkz _is061dl3 _1y8lgktf _kfgtgktf _cfu11txw _19o61h6o _24gj1h6o _wxb0tlke _18u0xmi2 _1bsb1rrh">
+          <div class="_1bsb1zx1">
+            <div class="_1e0c1txw _4cvr1h6o _2iu91osq _d8r5idpf">
+              <div class="css-q5x77ee">
+                <div class="css-1v0cd8t">
+                  <button aria-label="Edit" type="button" class="css-g2hnkr"></button>
+                  <div class="css-u3i0v">
+                    <div
+                      class="_1e0c1txw _4cvr1h6o _16jlidpf _1o9zidpf _i0dl1wug _80om1kw7 _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf">
+                      <span class="css-pxii8ww" style="max-width: 100%;">
+                        <span class="css-1341esss">Trong tiến trình</span>
+                      </span>
+                      <div class="_19bv1b66 _1p1dangw _k48p1nn1"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="_1e0c1txw _18u01wug _1ul91tcg">
+            <div class="_16jlidpf _1o9zidpf _i0dl1wug _tzy411de">
+              <button class="css-9snh2d" tabindex="0" type="button">
+                <span class="css-bwxjrz">
+                  <span role="img" aria-label="Collapse" class="css-1afrefi">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                      <path
+                        d="M8.062 11L6.5 9.914A1 1 0 017.914 8.5l2.616 2.616c.28.167.47.5.47.884s-.19.717-.47.884L7.914 15.5A1 1 0 116.5 14.086L8.062 13h-3.68c-.487 0-.882-.448-.882-1s.395-1 .882-1h3.68zm5.408 1.884c-.28-.167-.47-.5-.47-.884s.19-.717.47-.884L16.086 8.5A1 1 0 0117.5 9.914L15.938 11h3.68c.487 0 .882.448.882 1s-.395 1-.882 1h-3.68l1.562 1.086a1 1 0 01-1.414 1.414l-2.616-2.616z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <a class="css-9snh2d" nz-dropdown nzTrigger="click" [nzDropdownMenu]="Progress">
+              <span class="css-bwxjrz">
+                <span role="img" aria-label="Column actions menu" class="css-snhnyn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor" fill-rule="evenodd">
+                      <circle cx="5" cy="12" r="2"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                      <circle cx="19" cy="12" r="2"></circle>
+                    </g>
+                  </svg>
+                </span>
+              </span>
+            </a>
+            <nz-dropdown-menu #Progress="nzDropdownMenu">
+              <ul nz-menu>
+                <div class="css-xhdqsk">Hành Động</div>
+                <li nz-menu-item><span nz-icon nzType="translation" nzTheme="outline" style="margin: 10px;"></span>Đổi
+                  Tên</li>
+                <li nz-menu-item><span nz-icon nzType="clear" nzTheme="outline" style="margin: 10px;"></span>Xóa Bảng
+                </li>
+              </ul>
+            </nz-dropdown-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="tasks">
+      <li style="height: 92px;" class="task" draggable="true" *ngFor="let item of filterTickets('In Progress')"
+        (dragstart)="onDragStart(item)" (click)="showModal(item)">
+        {{item.taskType}}
+        <div class="css-24zxcb">
+          <div class="_1e0c1txw _1bsb1ogy _1reo15vq _18m915vq">
+            <div class="_1e0c1txw _4cvr1h6o _1yt4swc3 _1c30otz2 _16jlkb7n _1o9zkb7n _i0dlf1ug _1reo15vq _18m915vq">
+              <span class="_2hwx1b66">
+                <div class="_1e0c1txw _1bah1h6o _2lx21bp4">
+                  <div role="presentation">
+                    <img class="sc-1j9o0vm-0 dMMVlq" src="/assets/avatar/10318.svg"></div>
+                </div>
+              </span>
+              <div class="_16jlidpf _1o9zkb7n _i0dl1wug _1eim1xrj _o5721q9c _1reo15vq _18m915vq _1e38mo4m">
+                <div role="presentation">
+                  <a class="sc-15cfu5s-0 kshFWQ" href="#">
+                    <span class="_1e0c1ule _1reo15vq _18m915vq _1bto1l2s _1wyb1crf _k48pni7l _syaz1o15">{{item.projectKey}}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="_1e0c1txw _4cvr1h6o _1yt4swc3 _1c30otz2">
+              <div class="_1e0c1txw _1bah1h6o _4cvr1h6o">
+                <div role="presentation">
+                  <img class="up9zoy-0 eYnrAP" alt="Medium" src="/assets/avatar/medium.svg">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="column" (dragover)="onDrapOver($event)" (drop)="onDrop($event,'Done')">
+    <div
+      class="_154iidpf _uiztglyw _4t3ickbl _1wybdlk8 _pdyk427j _1kt9b3bt _1cs8stnw _19wo1i6y _qnecidpf _oounidpf _kfgtyh40 _dsq4glyw _1rus1wws _59hlidpf _hilggrho _iyyqgrho _1tsagrho _3bdqt94y _at5wt94y _hrqx1tcg _1bcp1tcg _qdka1tcg _ttss1tcg _1ho1u2gc _pg6ou2gc _1pbyegat _kqsw1if8 _80om1qgj _bfhk1j6p _154pidpf">
+      <div class="_syaz1tgx _4cvr1h6o _1bah1e5h _1e0c1txw _4t3i1osq _19bvpxbi _u5f3u2gc _13lii2wt _qrwqi2wt _bfhkhri9">
+        <div
+          class="_1e0c1txw _4cvr1h6o _1kt9mrja _l5lo7vkz _1uak7vkz _is061dl3 _1y8lgktf _kfgtgktf _cfu11txw _19o61h6o _24gj1h6o _wxb0tlke _18u0xmi2 _1bsb1rrh">
+          <div class="_1bsb1zx1">
+            <div class="_1e0c1txw _4cvr1h6o _2iu91osq _d8r5idpf">
+              <div class="css-q5x77ee">
+                <div class="css-1v0cd8t">
+                  <button aria-label="Edit" type="button" class="css-g2hnkr"></button>
+                  <div class="css-u3i0v">
+                    <div
+                      class="_1e0c1txw _4cvr1h6o _16jlidpf _1o9zidpf _i0dl1wug _80om1kw7 _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf">
+                      <span class="css-pxii8w" style="max-width: 100%;">
+                        <span class="css-1341ess">Hoàn Thành</span>
+                      </span>
+                      <div class="_19bv1b66 _1p1dangw _k48p1nn1"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="_1e0c1txw _18u01wug _1ul91tcg">
+            <div class="_16jlidpf _1o9zidpf _i0dl1wug _tzy411de">
+              <button class="css-9snh2d" tabindex="0" type="button">
+                <span class="css-bwxjrz">
+                  <span role="img" aria-label="Collapse" class="css-1afrefi">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                      <path
+                        d="M8.062 11L6.5 9.914A1 1 0 017.914 8.5l2.616 2.616c.28.167.47.5.47.884s-.19.717-.47.884L7.914 15.5A1 1 0 116.5 14.086L8.062 13h-3.68c-.487 0-.882-.448-.882-1s.395-1 .882-1h3.68zm5.408 1.884c-.28-.167-.47-.5-.47-.884s.19-.717.47-.884L16.086 8.5A1 1 0 0117.5 9.914L15.938 11h3.68c.487 0 .882.448.882 1s-.395 1-.882 1h-3.68l1.562 1.086a1 1 0 01-1.414 1.414l-2.616-2.616z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <a class="css-9snh2d" nz-dropdown nzTrigger="click" [nzDropdownMenu]="Done">
+              <span class="css-bwxjrz">
+                <span role="img" aria-label="Column actions menu" class="css-snhnyn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor" fill-rule="evenodd">
+                      <circle cx="5" cy="12" r="2"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                      <circle cx="19" cy="12" r="2"></circle>
+                    </g>
+                  </svg>
+                </span>
+              </span>
+            </a>
+            <nz-dropdown-menu #Done="nzDropdownMenu">
+              <ul nz-menu>
+                <div class="css-xhdqsk">Hành Động</div>
+                <li nz-menu-item><span nz-icon nzType="translation" nzTheme="outline" style="margin: 10px;"></span>Đổi
+                  Tên</li>
+                <li nz-menu-item> <span nz-icon nzType="clear" nzTheme="outline" style="margin: 10px;"></span>Xóa Bảng
+                </li>
+              </ul>
+            </nz-dropdown-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="tasks">
+      <li style="height: 92px;" class="task" draggable="true" *ngFor="let item of filterTickets('Done')"
+        (dragstart)="onDragStart(item)" (click)="showModal(item)">
+        {{item.taskType}}
+        <div class="css-24zxcb">
+          <div class="_1e0c1txw _1bsb1ogy _1reo15vq _18m915vq">
+            <div class="_1e0c1txw _4cvr1h6o _1yt4swc3 _1c30otz2 _16jlkb7n _1o9zkb7n _i0dlf1ug _1reo15vq _18m915vq">
+              <span class="_2hwx1b66">
+                <div class="_1e0c1txw _1bah1h6o _2lx21bp4">
+                  <div role="presentation">
+                    <img class="sc-1j9o0vm-0 dMMVlq" src="/assets/avatar/10318.svg"></div>
+                </div>
+              </span>
+              <div class="_16jlidpf _1o9zkb7n _i0dl1wug _1eim1xrj _o5721q9c _1reo15vq _18m915vq _1e38mo4m">
+                <div role="presentation">
+                  <a class="sc-15cfu5s-0 kshFWQ" href="#">
+                    <span class="_1e0c1ule _1reo15vq _18m915vq _1bto1l2s _1wyb1crf _k48pni7l _syaz1o15">{{item.projectKey}}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="_1e0c1txw _4cvr1h6o _1yt4swc3 _1c30otz2">
+              <div class="_1e0c1txw _1bah1h6o _4cvr1h6o">
+                <div role="presentation">
+                  <img class="up9zoy-0 eYnrAP" alt="Medium" src="/assets/avatar/medium.svg">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sc-1dh8dfs-0 dQqPkB">
+    <div class="pslf7a-0 llkkMR">
+      <div class="j6by6c-0 XIZLc">
+        <div role="presentation">
+          <button aria-label="Create column" class="css-n5x5lf" tabindex="0" type="button">
+            <span class="css-bwxjrz">
+              <span aria-hidden="true" class="css-snhnyn">
+                <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                  <path d="M13 11V7a1 1 0 00-2 0v4H7a1 1 0 000 2h4v4a1 1 0 002 0v-4h4a1 1 0 000-2h-4z"
+                    fill="currentColor" fill-rule="evenodd"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<nz-modal [nzWidth]="'1280px'" [nzStyle]="{ 'height': '400px', 'z-index': '1000' }" [(nzVisible)]="isVisible" nzTitle="Chi tiết công việc" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <ng-container *nzModalContent>
+
+    <div id="jira-issue-header" class="_ca0q1ejb _n3tdu2gc _19bvxy5q _u5f315zz _kx8pidpf"  *ngIf="selectedProject">
+      <div class="_ogwtidpf _6tinidpf _1cezidpf _m3zkidpf _7yjtidpf _ldgnidpf _un3pidpf _29hzidpf _19bv1rm0 _10a1idpf _1c9eidpf _wfyiidpf _mxn3idpf _1q0p1osq">
+        <div class="css-1120ym1">
+          <div class="css-icnst3">
+            <div class="_1tkezwfg _otyrv77o _1e0c1txw _1bah1yb4 _4t3i1osq _4cvr1h6o">
+              <div class="_1tkezwfg _2hwxidpf _18u0idpf _otyrv77o _4t3i1osq _4cvr1h6o _p12f1osq _1e0c1txw _1bahesu3">
+                <div class="_1e0c1txw _4cvr1h6o _16jlkb7n _1reoewfl _18m9ewfl _1looidpf _6myxgktf">
+                  <div class="_1e0c1txw _16jlidpf _1reoewfl _18m9ewfl">
+                    <nav aria-label="Breadcrumbs">
+                      <ol class="css-1h6m8iz">
+                        <div class="_1e0c1txw _19pkidpf _2hwxidpf _otyridpf _18u0idpf _1ywu1txw _j8d6v77o _aetr1n76 _tua5idpf _18d3h8dc _gkt51h6o _z0aiftgi _1av2r5cr _17qdb3bt">
+                          <div class="_u5f31b66">
+                            <div role="presentation">
+                              <button class="css-1michz" type="button">
+                                <span class="css-bwxjrz">
+                                  <img src="/assets/avatar/10318.svg" width="16px" height="16px" alt="Task" class="_1reo15vq _18m915vq _16jlidpf _1o9zidpf _i0dl1wug">
+                                  </span>
+                                </button>
+                            </div>
+                          </div>
+                          <div role="presentation">
+                            <li class="css-1ezvki8">
+                              <a class="css-1jng6we" href="#">
+                                <span class="css-1gd7hga">{{ selectedProject.projectKey }}</span>
+                              </a>
+                            </li>
+                          </div>
+                          <div class="_ca0qv77o _tzy4idpf _v5641n2p _t9ecs3yl _19bv1b66 _1e0c1txw _4cvresu3 _1h7hkb7n _1bvq1xty issue_view_permalink_button_wrapper">
+                            <div class="sc-1g0si8d-0 llvtxA">
+                              <div class="sc-1g0si8d-1 ezniiT">
+                                <div class="css-1s25hsw">
+                                  <input id="BreadcrumbCurrentIssue" label="Copy link to issue" tabindex="-1" name="field-copy-text" readonly="" class="css-1cab8vv" value=""></div>
+                              </div>
+                              <span role="presentation">
+                                <button class="css-yjb2hd" type="button">
+                                  <span class="css-18kgcs9">
+                                    <span class="css-1wits42">
+                                      <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                        <g fill="currentColor" fill-rule="evenodd">
+                                          <path
+                                            d="M12.856 5.457l-.937.92a1.002 1.002 0 000 1.437 1.047 1.047 0 001.463 0l.984-.966c.967-.95 2.542-1.135 3.602-.288a2.54 2.54 0 01.203 3.81l-2.903 2.852a2.646 2.646 0 01-3.696 0l-1.11-1.09L9 13.57l1.108 1.089c1.822 1.788 4.802 1.788 6.622 0l2.905-2.852a4.558 4.558 0 00-.357-6.82c-1.893-1.517-4.695-1.226-6.422.47">
+                                          </path>
+                                          <path
+                                            d="M11.144 19.543l.937-.92a1.002 1.002 0 000-1.437 1.047 1.047 0 00-1.462 0l-.985.966c-.967.95-2.542 1.135-3.602.288a2.54 2.54 0 01-.203-3.81l2.903-2.852a2.646 2.646 0 013.696 0l1.11 1.09L15 11.43l-1.108-1.089c-1.822-1.788-4.802-1.788-6.622 0l-2.905 2.852a4.558 4.558 0 00.357 6.82c1.893 1.517 4.695 1.226 6.422-.47">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                    </span>
+                                  </span>
+                                </button>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="_1tkezwfg _2hwxidpf _18u01wug _otyrv77o _4t3i1osq _4cvr1h6o _p12f1osq _1e0c1txw _1bahesu3">
+                <div class="_1e0c1txw _2lx2vrvc _1n261q9c _1reo15vq _18m915vq _c71lzwfg _6myxpxbi _1loov47k _16jlkb7n _1o9zidpf _i0dl1wug _1bahesu3 _uiztglyw">
+                  <div class="h5xpn2-0 erfPlV">
+                    <div class="_1n1uewfl _nz6rewfl">
+                      <div>
+                        <div role="presentation">
+                          <div class="_hyh1otz2 _a7a01txw _18iz1h6o _1ul91mcy _1e0c1txw _1bahesu3">
+                            <button class="css-48ccbj" type="button">
+                              <span class="css-178ag6o">
+                                <div class="_1e0c1txw _4cvr1h6o">
+                                  <span class="_1e0c1txw">
+                                    <span class="css-1afrefi">
+                                      <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                        <g fill="currentColor" fill-rule="evenodd">
+                                          <path
+                                            d="M11.983 15.984a4.005 4.005 0 01-4.002-4c0-2.206 1.795-4 4.002-4a4.005 4.005 0 014.002 4c0 2.206-1.795 4-4.002 4M12 4C6.48 4 2 8.84 2 12c0 3.086 4.577 8 10 8s10-4.914 10-8c0-3.16-4.481-8-10-8">
+                                          </path>
+                                          <circle cx="12" cy="12" r="2"></circle>
+                                        </g>
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span class="_18u0v77o _1ul9o7ao">
+                                    <span style="white-space: pre;">
+                                      <span style="position: relative; display: inline-block;">
+                                        <span style="visibility: hidden;">1</span>
+                                        <span style="display: inline-block; position: absolute; left: 0px; transition: transform 0.2s ease 0s, opacity 0.2s ease 0s; transform: translateY(0px) translateZ(0px); opacity: 1; pointer-events: none;">1</span>
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mika2w-0 cPyzab">
+                    <div aria-expanded="false" aria-haspopup="true">
+                      <div role="presentation">
+                        <button class="v67syn-0 blsgCH css-48ccbj" type="button">
+                          <span class="css-178ag6o">
+                            <span class="sc-7j5n09-0 gbOGkx">
+                              <span class="_1e0c1txw">
+                                <span aria-hidden="true" class="css-1afrefi">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                    <path
+                                      d="M4 12v7a.971.971 0 00.278.704.99.99 0 00.701.296H6v-9H4.98a.99.99 0 00-.701.296A.971.971 0 004 12zm15.281-.96a3.046 3.046 0 00-2.321-1.061h-2.634c.04-.181.08-.36.11-.532.515-2.934 0-4-.504-4.594A2.432 2.432 0 0012.075 4a3.078 3.078 0 00-2.968 2.751c-.393 1.839-.454 2-.968 2.725l-.768 1.089a2.011 2.011 0 00-.363 1.141v6.273c.001.532.216 1.041.596 1.416s.896.585 1.433.584h7.247a3.014 3.014 0 002.997-2.507l.677-4a2.963 2.963 0 00-.677-2.432zm-1.998 6.1a1.007 1.007 0 01-1 .835H9.038v-6.269l.767-1.089a7.577 7.577 0 001.302-3.509c.036-.543.255-1.209.969-1.108.714.1.575 1.916.363 3.1a19.712 19.712 0 01-.868 2.882l5.39-.008c.297-.001.58.128.773.352a.993.993 0 01.226.813l-.676 4.001z"
+                                      fill="currentColor" fill-rule="evenodd">
+                                    </path>
+                                  </svg>
+                                </span>
+                              </span>
+                              <span class="sc-7j5n09-1 bnXAQC">
+                                <span style="white-space: pre;"></span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="_1o9zidpf">
+                    <div role="presentation">
+                      <button class="css-9snh2d" type="button">
+                        <span class="css-bwxjrz">
+                          <span role="img"
+                            aria-label="Share" class="css-1afrefi">
+                            <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                              <g fill="currentColor" fill-rule="evenodd">
+                                <path
+                                  d="M6 15a3 3 0 100-6 3 3 0 000 6zm0-2a1 1 0 110-2 1 1 0 010 2zm12-4a3 3 0 100-6 3 3 0 000 6zm0-2a1 1 0 110-2 1 1 0 010 2zm0 14a3 3 0 100-6 3 3 0 000 6zm0-2a1 1 0 110-2 1 1 0 010 2z"
+                                  fill-rule="nonzero">
+                                </path>
+                                <path d="M7 13.562l8.66 5 1-1.732-8.66-5z"></path>
+                                <path d="M7 10.83l1 1.732 8.66-5-1-1.732z"></path>
+                              </g>
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="h5xpn2-0 erfPlV">
+                    <div class="_1e0c1bgi">
+                      <div aria-expanded="false" aria-haspopup="true">
+                        <div role="presentation">
+                          <button class="css-1mx2m6a" type="button">
+                            <span class="css-bwxjrz">
+                              <span aria-hidden="true" class="css-1afrefi">
+                                <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                  <g fill="currentColor" fill-rule="evenodd">
+                                    <circle cx="5" cy="12" r="2"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                    <circle cx="19" cy="12" r="2"></circle>
+                                  </g>
+                                </svg>
+                              </span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form>
+      <p-splitter [style]="{ width: '100%', height: '450px', border: 'none' }" styleClass="mb-5">
+
+        <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center _12ji1r31 _1qu2glyw _12y31o36 _1reo1e7b _18m92qvy _16jlkb7n _1o9zidpf _i0dlidpf _1ul9xilx">
+            <div class="_ca0qidpf _u5f31ejb _n3tdzwfg _19bvzwfg _12ji1r31 _1qu2glyw _12y31o36">
+              <div class="_1e0c1txw _16jlkb7n _1o9zkb7n _i0dl1wug _1ul9idpf _1bsb1osq">
+                <div class="_1e0c1txw _16jlkb7n _1o9zkb7n _i0dl1wug _p7r11txw _nphskb7n _t1edkb7n _1t3b1wug">
+                  <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                    <div class="_1bsb1osq">
+                      <div class="_1bsb1osq _18u0x0bf _19pkx0bf _bhl91osq">
+                        <div class="sc-1u79nuj-0 fFzhmA">
+                          <form>
+                            <div class="css-q5x77e">
+                              <div class="css-1v0cd8t">
+                                <button class="css-g2hnkr"></button>
+                                <div class="css-u3i0v">
+                                  <div class="_1e0c1txw _vwz4kb7n _p12f1osq _1nmz1hna _ca0q12x7 _n3td12x7 _kqswh2mm _1ltv12x7">
+                                    <h1 class="_1wyb1tcg _vwz41f4h _k48pbfng _1dyzz5jk _1bsb1osq _19pkidpf _2hwxidpf _otyridpf _18u0idpf _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _syaz1fxt _mc2h1hna _14fy1hna _osi5fg65"> {{ selectedProject.summary }}</h1>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="_kqswh2mm">
+                <div style="display: block; width: 100%; position: absolute;"></div>
+              </div>
+              <div class="_otyr1b66 _1yt4swc3 _1e0c116y">
+                <div role="presentation">
+                  <span class="_2hwxu2gc">
+                    <button aria-label="Attach" class="css-1xewsy6" type="button">
+                      <span class="css-4h66kx">
+                        <span class="_ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _18u0myb0 _2hwx12gs">
+                          <span aria-hidden="true" class="css-1afrefi">
+                            <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                              <path
+                                d="M11.643 17.965c-1.53 1.495-4.016 1.496-5.542.004a3.773 3.773 0 01.002-5.412l7.147-6.985a2.316 2.316 0 013.233-.003c.893.873.895 2.282.004 3.153l-6.703 6.55a.653.653 0 01-.914-.008.62.62 0 010-.902l6.229-6.087a.941.941 0 000-1.353.995.995 0 00-1.384 0l-6.23 6.087a2.502 2.502 0 000 3.607 2.643 2.643 0 003.683.009l6.703-6.55a4.074 4.074 0 00-.003-5.859 4.306 4.306 0 00-6.002.003l-7.148 6.985a5.655 5.655 0 00-.001 8.118c2.29 2.239 6.015 2.238 8.31-.005l6.686-6.533a.941.941 0 000-1.353.995.995 0 00-1.384 0l-6.686 6.534z"
+                                fill="currentColor" fill-rule="evenodd">
+                              </path>
+                            </svg>
+                          </span>
+                        </span>
+                      </span>
+                      <span class="css-178ag6o">Gắn</span>
+                    </button>
+                  </span>
+                </div>
+                <div role="presentation">
+                  <span class="_2hwxu2gc">
+                    <button aria-label="Add a child issue" class="css-1xewsy6" tabindex="0" type="button">
+                      <span class="css-4h66kx">
+                        <span class="_ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _18u0myb0 _2hwx12gs">
+                          <span aria-hidden="true" class="css-1afrefi">
+                            <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                              <g fill="currentColor" fill-rule="evenodd">
+                                <path d="M11 7h2v5h-2zm5 6h2v3h-2zM6 13h2v3H6z"></path>
+                                <path d="M7 11h10a1 1 0 011 1v1H6v-1a1 1 0 011-1z"></path>
+                                <path
+                                  d="M5 18v1h4v-1H5zm0-2h4a2 2 0 012 2v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1a2 2 0 012-2zm10 2v1h4v-1h-4zm0-2h4a2 2 0 012 2v1a2 2 0 01-2 2h-4a2 2 0 01-2-2v-1a2 2 0 012-2zM10 5v1h4V5h-4zm0-2h4a2 2 0 012 2v1a2 2 0 01-2 2h-4a2 2 0 01-2-2V5a2 2 0 012-2z"
+                                  fill-rule="nonzero">
+                                </path>
+                              </g>
+                            </svg>
+                          </span>
+                        </span>
+                      </span>
+                      <span class="css-178ag6o">Thêm hành động liên kết</span>
+                    </button>
+                  </span>
+                </div>
+                <span class="_1e0c1txw _2hwxu2gc">
+                  <div role="presentation">
+                    <button aria-label="Link issue" class="css-1d0sz8l" type="button">
+                      <span class="css-4h66kx">
+                        <span class="_ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _18u0myb0 _2hwx12gs">
+                          <span aria-hidden="true" class="css-1afrefi">
+                            <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                              <g fill="currentColor" fill-rule="evenodd">
+                                <path
+                                  d="M12.856 5.457l-.937.92a1.002 1.002 0 000 1.437 1.047 1.047 0 001.463 0l.984-.966c.967-.95 2.542-1.135 3.602-.288a2.54 2.54 0 01.203 3.81l-2.903 2.852a2.646 2.646 0 01-3.696 0l-1.11-1.09L9 13.57l1.108 1.089c1.822 1.788 4.802 1.788 6.622 0l2.905-2.852a4.558 4.558 0 00-.357-6.82c-1.893-1.517-4.695-1.226-6.422.47">
+                                </path>
+                                <path
+                                  d="M11.144 19.543l.937-.92a1.002 1.002 0 000-1.437 1.047 1.047 0 00-1.462 0l-.985.966c-.967.95-2.542 1.135-3.602.288a2.54 2.54 0 01-.203-3.81l2.903-2.852a2.646 2.646 0 013.696 0l1.11 1.09L15 11.43l-1.108-1.089c-1.822-1.788-4.802-1.788-6.622 0l-2.905 2.852a4.558 4.558 0 00.357 6.82c1.893 1.517 4.695 1.226 6.422-.47">
+                                </path>
+                              </g>
+                            </svg>
+                          </span>
+                        </span>
+                      </span>
+                      <span class="css-178ag6o">Liên kết</span>
+                    </button>
+                  </div>
+                  <div role="presentation">
+                    <button class="css-dhqn5e" type="button">
+                      <span class="css-18kgcs9">
+                        <span class="_1yt41b66">
+                          <span aria-hidden="true" class="css-1afrefi">
+                            <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                              <path
+                                d="M8.292 10.293a1.009 1.009 0 000 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 000-1.419.987.987 0 00-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 00-1.406 0z"
+                                fill="currentColor" fill-rule="evenodd">
+                              </path>
+                            </svg>
+                          </span>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </span>
+                <span class="_2hwxu2gc"></span>
+                <div class="_1e0c116y">
+                  <button aria-label="Add app" class="css-vh69n9" type="button">
+                    <span class="css-18kgcs9">
+                      <span class="_1yt41b66">
+                        <span aria-hidden="true" class="css-1afrefi">
+                          <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                            <g fill="currentColor" fill-rule="evenodd">
+                              <circle cx="5" cy="12" r="2"></circle>
+                              <circle cx="12" cy="12" r="2"></circle>
+                              <circle cx="19" cy="12" r="2"></circle>
+                            </g>
+                          </svg>
+                        </span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="_19pkftgi">
+                <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                  <div class="_1bsb1osq">
+                    <div class="_1runpxbi">
+                      <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _1e0c1txw _4cvr1h6o _1n261q9c _1bah1yb4">
+                        <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _1e0c1txw _1bah1y6m _4cvr1h6o _p12f1osq">
+                          <h2 class="_1wyb1x4e _k48pni7l _1dyz44hb _vwz41tcg _syaz1fxt _1i4q1hna _1ul9idpf"> Mô tả</h2>
+                        </div>
+                      </div>
+
+                      <div class="_1b0m53f4">
+                        <div role="presentation">
+                          <div class="_1bsb1osq _1bohx0bf _a4q3x0bf _1gzc1txw _auuz1h6o _1o4r1hna _osjgidpf _alyvidpf _pa3x12x7 _2g9b12x7">
+                            <div class="_otyr1tcg _3tcu1h67">
+                              <div class="sc-1u79nuj-0 fFzhmA">
+                                <form>
+                                  <div class="css-q5x77e">
+                                    <div class="css-1v0cd8t">
+                                      <button type="button" class="css-g2hnkr" (click)="showEditor = true"></button>
+                                      <div class="css-u3i0v">
+                                        <div class="_1bsb1osq">
+                                          <span *ngIf="!showEditor" class="_syaz1rc1" (click)="showEditor = true">{{ selectedProject.description }}</span>
+                                          <p-editor *ngIf="showEditor" [(ngModel)]="text" [style]="{ height: '100px' }"></p-editor>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="_19pk1ylp"></div>
+
+              </div>
+              <div class="_kqswh2mm">
+                <div style="display: block; width: 100%; position: absolute;"></div>
+              </div>
+              <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _1e0c1txw _4cvr1h6o _1n261q9c _1bah4jg8">
+                <h2 class="_1wyb1x4e _k48pni7l _1dyz44hb _vwz41tcg _syaz1fxt _1i4q1hna _1ul9idpf"> Hành động</h2>
+              </div>
+              <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _1e0c1txw _4cvr1h6o _1n261q9c _1bah1yb4 _19pk1y44">
+                <div class="_1e0c1txw">
+                  <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _1e0c1txw _1bah1y6m _4cvr1h6o _p12f1osq"> Xem:</div>
+                  <div role="menubar" class="_1e0c1txw _4cvr1h6o _18u0ftgi">
+                    <button role="menuitemradio" class="css-1r8e71f" type="button">
+                      <span class="css-178ag6o">Tất cả</span>
+                    </button>
+                    <button role="menuitemradio" class="css-1t1p59d" type="button">
+                      <span class="css-178ag6o">Bình luận</span>
+                      </button>
+                      <button role="menuitemradio" class="css-1r8e71f" type="button">
+                      <span class="css-178ag6o">Lịch sử</span>
+                    </button>
+                    <button role="menuitemradio" class="css-1r8e71f" type="button">
+                      <span class="css-178ag6o">Thông tin </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="_1wpzesu3 _1e0c1txw _2lx2vrvc _zulpu2gc">
+                  <div>
+                    <div role="presentation">
+                      <button class="css-1y5q6ju" type="button">
+                        <span class="css-178ag6o">Trang mới nhất</span>
+                          <span class="css-1q91qu1">
+                            <span role="img" aria-label="Newest first" class="css-1wits42">
+                            <svg role="presentation" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path
+                                  d="M6.8,4.3 C6.6,4.1 6.3,4 6,4 C5.7,4 5.4,4.1 5.2,4.3 L2.3,7.2 C1.9,7.6 1.9,8.3 2.3,8.7 C2.7,9.1 3.3,9.1 3.7,8.7 L5,7.4 L5,19.1 C5,19.6 5.4,20 6,20 C6.6,20 7,19.6 7,19.1 L7,7.4 L8.3,8.7 C8.7,9.1 9.3,9.1 9.7,8.7 C10.1,8.3 10.1,7.6 9.7,7.2 C9.04754611,6.54754611 8.5582057,6.0582057 8.23197876,5.73197876 C7.91376126,5.41376126 7.436435,4.936435 6.8,4.3 Z"
+                                  id="Path" fill="currentColor" fill-rule="nonzero"
+                                  transform="translate(6.000000, 12.000000) rotate(180.000000) translate(-6.000000, -12.000000) ">
+                                </path>
+                                <path
+                                  d="M21,5 L13,5 C12.4,5 12,5.4 12,6 C12,6.6 12.4,7 13,7 L21,7 C21.6,7 22,6.6 22,6 C22,5.4 21.6,5 21,5 Z"
+                                  id="Path" fill="currentColor" fill-rule="nonzero"></path>
+                                <path
+                                  d="M13,13 L18,13 C18.6,13 19,12.6 19,12 C19,11.4 18.6,11 18,11 L13,11 C12.4,11 12,11.4 12,12 C12,12.6 12.4,13 13,13 Z"
+                                  id="Path" fill="currentColor" fill-rule="nonzero"></path>
+                                <path
+                                  d="M13,19 L16,19 C16.6,19 17,18.6 17,18 C17,17.4 16.6,17 16,17 L13,17 C12.4,17 12,17.4 12,18 C12,18.6 12.4,19 13,19 Z"
+                                  id="Path" fill="currentColor" fill-rule="nonzero"></path>
+                              </g>
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div><span>
+                <div class=""></div>
+                <div class="_kqswh2mm">
+                  <div style="display: block; width: 100%; position: absolute;"></div>
+                </div>
+                <span>
+                  <span></span>
+
+                  <!-- Comments -->
+                  <div class="_17gjpfqs _kqsw1if8 _1pbympez _v5641pm3 _t9ec1wrz _94n51n1a _154i186y _11q71brw _19bvu2gc _18u0x0bf">
+                    <div class="_1e0c1txw _ca0qpxbi _n3tdpxbi _19pku2gc _otyrmgjw _11q71bhr">
+                      <div class="_2hwxutpp _19pkv77o">
+                        <div style="display: inline-block; position: relative; outline: 0px;">
+                          <span class="css-1qdk52b">
+                            <img src="/assets/img/avata.jpg" alt="Profile image of Công Đồng Văn" class="css-13ep12v" style="border-radius: 50%;">
+                            </span>
+                          </div>
+                      </div>
+                      <div class="_16jlkb7n _1o9zkb7n _i0dl1osq _1ul9idpf _swxz1kw7">
+                        <div>
+                          <div>
+                            <div>
+                              <div>
+                                <div class="issue-editor-start"></div>
+                                <div class="_1x2nzo7u _1o48ijlo _1gouijlo _1yimijlo _wa8tzwnf _nh9ozwnf _1u5nijlo _qdx3ijlo _13utijlo _v5hfijlo _18guijlo _o9eyijlo _uq4eijlo _llkqijlo">
+                                  <input placeholder="Thêm ghi chú ..." class="css-16agqm4">
+                                </div>
+                                <div class="issue-editor-end"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div></div>
+                        </div>
+                        <small class="_syaz1wmz _1e0c1ule _19pku2gc _o5721q9c _1wyb1crf _vwz41cnx">
+                          <strong>Mẹo:</strong> nhấn
+                          <span class="css-17k26hu" style="max-width: 100%;">
+                            <span class="css-1q42gk0" style="max-width: calc(200px - var(--ds-space-100, 8px));">M</span>
+                          </span>
+                          để bình luận
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span></span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate>
+
+          <div class="col flex align-items-center justify-content-center _12ji1r31 _1qu2glyw _12y31o36 _1reo1e7b _18m92qvy _1ul9yc1a">
+            <div class="_ca0qidpf _u5f3gktf _n3tdzwfg _19bvu2gc _12ji1r31 _1qu2glyw _12y31o36">
+              <div class="_3um0ewfl">
+                <div class="_otyridpf">
+                  <div class="_1e0c1txw _1n261g80 _ca0qutpp _n3tdn7od _8mocu2gc">
+                    <div class="_u5f3n7od _n3tdu2gc">
+                      <div class="_1e0c1kw7 _2lx21kw7 _4cvr1kw7 _1bah1kw7">
+                        <div>
+                          <div>
+                            <div>
+                              <div class="sc-1lwrh88-0 dVewfD">
+                                <button id="issue.fields.status-view.status-button" class="_12r2ni7l _193g147y _11a4147y _dntb1gfe _cp4g1gfe _5xmdihng _11sm1gfe css-1luyhz2" type="button">
+                                  <span class="css-178ag6o">Đang tiến hành</span>
+                                  <span class="css-1q91qu1">
+                                    <span aria-hidden="true" class="css-snhnyn">
+                                      <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                        <path
+                                          d="M8.292 10.293a1.009 1.009 0 000 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 000-1.419.987.987 0 00-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 00-1.406 0z"
+                                          fill="currentColor" fill-rule="evenodd">
+                                        </path>
+                                      </svg>
+                                    </span>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="sc-1m3gfvr-0 euBxww">
+                        <span role="img" aria-label="Done" class="css-1afrefi">
+                          <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                            <path
+                              d="M6.735 12.322a1 1 0 00-1.47 1.356l3.612 3.919c.537.526 1.337.526 1.834.03l.364-.359a2335.638 2335.638 0 003.939-3.883l.04-.04a492.598 492.598 0 003.658-3.643 1 1 0 00-1.424-1.404 518.42 518.42 0 01-3.64 3.625l-.04.04a2049.114 2049.114 0 01-3.775 3.722l-3.098-3.363z"
+                              fill="currentColor">
+                            </path>
+                          </svg>
+                        </span>
+                        <div role="presentation">
+                          <span class="sc-1m3gfvr-1 kVXQVW">Hoàn Thành</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="_n3tdu2gc _1e0c116y _1n261q9c _p12f1osq">
+                      <div class="sc-125deoh-0 itAyAB">
+                        <button class="css-48ccbj" tabindex="0" type="button">
+                          <span class="css-4h66kx">
+                            <span aria-hidden="true" class="css-1afrefi">
+                              <svg role="presentation" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.3789 4.62256C9.99914 4.62173 9.65331 4.84087 9.49192 5.18458L6.11523 12.3762C5.97308 12.679 5.9956 13.0334 6.17494 13.3157C6.35428 13.598 6.66553 13.7691 7 13.7691H8.79182L6.40251 18.1304C6.17135 18.5523 6.28163 19.0798 6.66249 19.3738C7.04335 19.6677 7.58152 19.6408 7.93117 19.3103L16.8269 10.902C17.1178 10.6269 17.2117 10.2023 17.0637 9.83032C16.9157 9.45832 16.5558 9.21418 16.1555 9.21418H14.547L17.0353 6.24031C17.2787 5.94947 17.3319 5.5441 17.1717 5.20034C17.0116 4.85658 16.6671 4.63646 16.2879 4.63562L10.3789 4.62256Z"
+                                  stroke="currentColor" stroke-width="1.95489"
+                                  stroke-linejoin="round">
+                                </path>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="css-178ag6o">Hành động</span>
+                          <span class="css-1q91qu1">
+                            <span aria-hidden="true" class="css-snhnyn">
+                              <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                <path
+                                  d="M8.292 10.293a1.009 1.009 0 000 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 000-1.419.987.987 0 00-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 00-1.406 0z"
+                                  fill="currentColor" fill-rule="evenodd">
+                                </path>
+                              </svg>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="_kqswh2mm">
+                  <div style="display: block; width: 100%; position: absolute;"></div>
+                </div>
+                <div>
+                  <div></div>
+                  <div class="">
+                    <div>
+                      <div>
+                        <div class="_otyru2gc">
+                          <details open="" class="_vchhusvi _otyru2gc _1bzgidpf _y67v1yif _v9e41yif _12xi1yif _anbj1y44 _12gn1y44 _1jl4glyw _1pgpidpf _1apgidpf">
+                            <summary aria-label="Details" tabindex="0" stickyheaderposition="0" class="_ca0q1skh _u5f31crf _n3td1skh _19bv1crf _vchhusvi _146cjjyb _1rhgjjyb _texlutpp _kkknidpf _1e0c1txw _4t3ickbl _2rko1y44 _x3do1yif _19it1yif _4cvr1h6o _kqsw1if8 _bfhk1bhr _1pby1or5 _1du212yw _1v3l12yw _19lc12yw _1372tlke _1pjhtlke _d0altlke _3ipitcjq _hnpdtcjq _15hutcjq _nt75194a _1di6tmi0 _q4zta5ev _138p1ihn _w1b81ihn _1vn01ihn _2it8glyw _154iidpf">
+                              <strong class="_syaz1fxt _1wybdlk8 _u5f31b66 _o5721q9c _1reo15vq _18m915vq _1bto1l2s _p12f1nrf _k48pni7l _1o9zidpf">Chi tiết</strong>
+                              <div class="_18u01wug _1e0c1txw">
+                                <div role="presentation"></div>
+                                <div class="_1ul91tcg _otyrj39m">
+                                  <span aria-hidden="true" class="css-snhnyn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                      <path
+                                        d="M11.221 9.322l-2.929 2.955a1.009 1.009 0 000 1.419.986.986 0 001.405 0l2.298-2.317 2.307 2.327a.989.989 0 001.407 0 1.01 1.01 0 000-1.419l-2.94-2.965A1.106 1.106 0 0011.991 9c-.279 0-.557.107-.77.322z"
+                                        fill="currentColor" fill-rule="evenodd">
+                                      </path>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+                            </summary>
+                            <div class="_ca0qftgi _u5f31crf _n3tdftgi _19bv1crf _vchhusvi _146cjjyb _1rhgjjyb _texlutpp _kkknidpf">
+                              <div>
+                                <div class="_1e0c1kw7 _2lx21kw7 _4cvr1kw7 _1bah1kw7">
+                                  <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                                    <div class="_1bsb1osq">
+                                      <div>
+                                        <div class="_1e0c1txw _1n261g80 _otyrpxbi _1nmz1hna">
+                                          <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _kqswh2mm _16jlkb7n _vchhusvi _u5f31ejb _1ul968cl _1bsbhwvj _ca0qu2gc _vwz4kb7n _p12f7l9q _uyzq116y _bud1116y _1x8f116y _wu7yyfq0 _ievayfq0 _c1r1yfq0 _ncc4116y _omua116y _1e29116y">
+                                            <h2 class="_1wyb1jqr _zg8l1kw7 _vwz41clk _k48pni7l _19pkpxbi _vchhusvi _syaz1fxt"> Người nhận</h2>
+                                          </div>
+                                          <div class="_16jlkb7n _1bsb1nrf _vchhusvi _1j1hbgig _1owx16np">
+                                            <div role="presentation">
+                                              <div>
+                                                <div class="_1bsb1osq _18u0x0bf _19pkx0bf _15wgzwfg">
+                                                  <div class="sc-1u79nuj-0 fFzhmA">
+                                                    <form>
+                                                      <div class="css-q5x77e">
+                                                        <div class="css-1v0cd8t">
+                                                          <button class="css-g2hnkr"></button>
+                                                          <div class="css-u3i0v">
+                                                            <div class="_4cvr1h6o _1e0c1txw _1yt41cy0">
+                                                              <div class="_u5f3u2gc _ca0qt94y _11pjwsi6">
+                                                                <div style="display: inline-block; position: relative; outline: 0px;">
+                                                                  <span class="css-vnrk9l">
+                                                                    <span class="css-14m39g1">
+                                                                      <span class="css-snhnyn">
+                                                                        <img src="/assets/img/avata.jpg" width="24" height="24">
+                                                                      </span>
+                                                                    </span>
+                                                                  </span>
+                                                                </div>
+                                                              </div>
+                                                              <span class="_1e0c1txw _1n261g80 _zulp1nxw">
+                                                                <span>{{ selectedProject.taskManagerID }}</span>
+                                                              </span>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                                  <div class="_1bsb1osq">
+                                    <div class="_1q5411p5 _16vph2mm _14od1wug _1etn1wug _1ospglyw">
+                                      <div class="_1e0c1txw _1n261g80 _otyrpxbi _1nmz1hna">
+                                        <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _kqswh2mm _16jlkb7n _vchhusvi _u5f31ejb _1ul968cl _1bsbhwvj _ca0qu2gc _vwz4kb7n _p12f7l9q _uyzq116y _bud1116y _1x8f116y _wu7yyfq0 _ievayfq0 _c1r1yfq0 _ncc4116y _omua116y _1e29116y">
+                                          <h2 class="_1wyb1jqr _zg8l1kw7 _vwz41clk _k48pni7l _19pkpxbi _vchhusvi _syaz1fxt"> Quản lý</h2>
+                                        </div>
+                                        <div class="_16jlkb7n _1bsb1nrf _vchhusvi _1j1hbgig _1owx16np">
+                                          <div role="presentation">
+                                            <div>
+                                              <div class="_1bsb1osq _18u0x0bf _19pkx0bf _15wgzwfg">
+                                                <div class="sc-1u79nuj-0 fFzhmA">
+                                                  <form>
+                                                    <div class="css-q5x77e">
+                                                      <div class="css-1v0cd8t">
+                                                        <button aria-label="Công Đồng Văn- edit Reporter" type="button" class="css-g2hnkr"></button>
+                                                        <div class="css-u3i0v">
+                                                          <div class="_1l8r1osq">
+                                                            <span aria-haspopup="true" role="" tabindex="0">
+                                                              <div>
+                                                                <div class="_4cvr1h6o _1e0c1txw _1yt41cy0">
+                                                                  <div class="_u5f3u2gc _ca0qt94y _11pjwsi6">
+                                                                    <div style="display: inline-block; position: relative; outline: 0px;">
+                                                                      <span class="css-vnrk9l">
+                                                                        <img src="/assets/img/avata.jpg" alt="" class="css-13ep12v" style="border-radius: 50%;">
+                                                                        </span>
+                                                                    </div>
+                                                                  </div>
+                                                                  <span class="_1e0c1txw _1n261g80 _zulp1nxw">
+                                                                    <span>{{ selectedProject.fullName }}</span>
+                                                                  </span>
+                                                                </div>
+                                                              </div>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                                  <div class="_1bsb1osq">
+                                    <div class="_1e0c1txw _1n261g80 _otyrpxbi _1nmz1hna">
+                                      <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _kqswh2mm _16jlkb7n _vchhusvi _u5f31ejb _1ul968cl _1bsbhwvj _ca0qu2gc _vwz4kb7n _p12f7l9q _uyzq116y _bud1116y _1x8f116y _wu7yyfq0 _ievayfq0 _c1r1yfq0 _ncc4116y _omua116y _1e29116y">
+                                        <h2 class="_1wyb1jqr _zg8l1kw7 _vwz41clk _k48pni7l _19pkpxbi _vchhusvi _syaz1fxt"> Ưu tiên</h2>
+                                      </div>
+                                      <div class="_16jlkb7n _1bsb1nrf _vchhusvi _17m2bgig _196m16np">
+                                        <div>
+                                          <div class="_1bsb1osq _18u0x0bf _19pkx0bf _1gzc1txw _auuz1h6o _6vgs1osq _1rjezwfg _osjgidpf _alyvidpf _pa3x12x7 _2g9bidpf">
+                                            <div class="sc-1u79nuj-0 fFzhmA">
+                                              <form>
+                                                <div class="css-q5x77e">
+                                                  <div class="css-1v0cd8t">
+                                                    <button aria-label="Medium- edit Priority" type="button" class="css-g2hnkr"></button>
+                                                    <div class="css-u3i0v">
+                                                      <div class="_1e0c1txw _16jlkb7n _1o9zkb7n _i0dl1wug _1nmz1hna _kqswh2mm _vwz48sxn">
+                                                        <div class="_1e0c1txw _4cvr1h6o">
+                                                          <div class="_1e0c1txw _19bv12x7 _u5f312x7">
+                                                            <img src="https://dongvancong24.atlassian.net/images/icons/priorities/medium.svg" width="16px" height="16px" class="_1reo15vq _18m915vq _16jlidpf _1o9zidpf _i0dl1wug">
+                                                          </div>
+                                                          <span class="_18u0u2gc">{{ priorityMap[selectedProject.priority] }}</span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                                  <div class="_1bsb1osq">
+                                    <div class="_1e0c1txw _1n261g80 _otyrpxbi _1nmz1hna">
+                                      <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _kqswh2mm _16jlkb7n _vchhusvi _u5f31ejb _1ul968cl _1bsbhwvj _ca0qu2gc _vwz4kb7n _p12f7l9q _uyzq116y _bud1116y _1x8f116y _wu7yyfq0 _ievayfq0 _c1r1yfq0 _ncc4116y _omua116y _1e29116y">
+                                        <h2 class="_1wyb1jqr _zg8l1kw7 _vwz41clk _k48pni7l _19pkpxbi _vchhusvi _syaz1fxt"> Nhãn</h2>
+                                      </div>
+                                      <div class="_16jlkb7n _1bsb1nrf _vchhusvi _17m2bgig _196m16np">
+                                        <div class="sc-4ieuh0-0 cgNemy q52d93-0 izsSao">
+                                          <div style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;">
+                                          </div>
+                                          <div>
+                                            <div class="sc-1u79nuj-0 fFzhmA">
+                                              <form>
+                                                <div class="css-q5x77e">
+                                                  <div class="css-1v0cd8t">
+                                                    <button aria-label="Edit Labels" type="button" class="css-g2hnkr"></button>
+                                                    <div class="css-u3i0v">
+                                                      <div class="_1nmz1hna _kqswh2mm _1ltv12x7 _u5f3yh40 _18u0w5xv">
+                                                        <span class="_syaz1rc1">{{ selectedProject.taskType }}</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
+                                            </div>
+                                          </div>
+                                          <div style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                                  <div class="_1bsb1osq">
+                                    <div class="_1e0c1txw _1n261g80 _otyrpxbi _1nmz1hna _16ep1osq">
+                                      <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _kqswh2mm _16jlkb7n _vchhusvi _u5f31ejb _1ul968cl _1bsbhwvj _ca0qu2gc _vwz4kb7n _p12f7l9q _uyzq116y _bud1116y _1x8f116y _wu7yyfq0 _ievayfq0 _c1r1yfq0 _ncc4116y _omua116y _1e29116y">
+                                        <h2 class="_1wyb1jqr _zg8l1kw7 _vwz41clk _k48pni7l _19pkpxbi _vchhusvi _syaz1fxt"> Ngày đáo hạn</h2>
+                                      </div>
+                                      <div class="_16jlkb7n _1bsb1nrf _vchhusvi _17m2bgig _196m16np">
+                                        <div class="sc-1jubey0-1 ZYasH q52d93-0 izsSao">
+                                          <div class="sc-1u79nuj-0 fFzhmA">
+                                            <form>
+                                              <div class="css-q5x77e">
+                                                <div class="css-1v0cd8t">
+                                                  <button aria-label="Edit" type="button" class="css-g2hnkr"></button>
+                                                  <div class="css-u3i0v">
+                                                    <div class="sc-1jubey0-0 bjAtOw">
+                                                      <span class="_syaz1wmz">{{ selectedProject.endDate | date: 'yyyy-MM-dd' }}</span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                                  <div class="_1bsb1osq">
+                                    <div class="_1e0c1txw _1n261g80 _otyrpxbi _1nmz1hna">
+                                      <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _kqswh2mm _16jlkb7n _vchhusvi _u5f31ejb _1ul968cl _1bsbhwvj _ca0qu2gc _vwz4kb7n _p12f7l9q _uyzq116y _bud1116y _1x8f116y _wu7yyfq0 _ievayfq0 _c1r1yfq0 _ncc4116y _omua116y _1e29116y">
+                                        <h2 class="_1wyb1jqr _zg8l1kw7 _vwz41clk _k48pni7l _19pkpxbi _vchhusvi _syaz1fxt"> Số giờ thực hiện</h2>
+                                      </div>
+                                      <div class="_16jlkb7n _1bsb1nrf _vchhusvi _17m2bgig _196m16np">
+                                        <div>
+                                          <div class="_18u0x0bf _19pkx0bf _2hwxu2gc">
+                                            <div class="sc-1u79nuj-0 fFzhmA">
+                                              <form>
+                                                <div class="css-q5x77e">
+                                                  <div class="css-1v0cd8t">
+                                                    <button type="button" class="css-g2hnkr"></button>
+                                                    <div class="css-u3i0v">
+                                                      <div class="_ca0qidpf _n3tdidpf _19bv12x7 _u5f3idpf _2hwx1i6y _1tke1tcg">
+                                                        <div class="_16jlkb7n _19pk1l7b _2hwxv77o">
+                                                          <div class="_2rko1y44 _1e0c1txw _1reo15vq _18m915vq _1bsb1osq _1tkens44 _4t3i1y44">
+                                                            <div color="var(--ds-border-success, #36B37E)" width="0" class="_bfhk1cj8 _1o9zidpf _1bsb1rkg _v5641qcf _zk5aidpf _wsviv77o _1xoqidpf"></div>
+                                                            <div width="0"  class="_bfhk1cj8 _1o9zidpf _1bsb1rkg _v5641qcf _zk5aidpf _wsviv77o _1xoqidpf">
+                                                            </div>
+                                                            <div width="0" class="_bfhk1cj8 _1o9zidpf _1bsb1rkg _v5641qcf _zk5aidpf _wsviv77o _1xoqidpf">
+                                                            </div>
+                                                          </div>
+                                                          <small class="_syazjjyb _1e0c1txw _1bah1yb4 _19pkidpf _1wybdlk8 _1n261g80">
+                                                            <span class="_2hwx1b66">{{ selectedProject.actualHoursSpent }} giờ</span>
+                                                          </small>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                                  <div class="_1bsb1osq">
+                                    <div class="_1e0c1txw _1n261g80 _otyrpxbi _1nmz1hna _16ep1osq">
+                                      <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _kqswh2mm _16jlkb7n _vchhusvi _u5f31ejb _1ul968cl _1bsbhwvj _ca0qu2gc _vwz4kb7n _p12f7l9q _uyzq116y _bud1116y _1x8f116y _wu7yyfq0 _ievayfq0 _c1r1yfq0 _ncc4116y _omua116y _1e29116y">
+                                        <h2 class="_1wyb1jqr _zg8l1kw7 _vwz41clk _k48pni7l _19pkpxbi _vchhusvi _syaz1fxt"> Ngày bắt đầu</h2>
+                                      </div>
+                                      <div class="_16jlkb7n _1bsb1nrf _vchhusvi _17m2bgig _196m16np">
+                                        <div class="sc-1jubey0-1 ZYasH q52d93-0 izsSao">
+                                          <div class="sc-1u79nuj-0 fFzhmA">
+                                            <form>
+                                              <div class="css-q5x77e">
+                                                <div class="css-1v0cd8t">
+                                                  <button aria-label="Edit" type="button" class="css-g2hnkr"></button>
+                                                  <div class="css-u3i0v">
+                                                    <div class="sc-1jubey0-0 bjAtOw">
+                                                      <span class="_syaz1wmz">{{ selectedProject.createdDate | date: 'yyyy-MM-dd' }}</span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="_kqswh2mm _16jlkb7n _1o9zkb7n _i0dlf1ug">
+                                  <div class="_1bsb1osq">
+                                    <div class="_1e0c1txw _1n261g80 _otyrpxbi _1nmz1hna">
+                                      <div class="_14nx1u4f _s1t41u4f _13pa1440 _nopz1440 _1fr61440 _uqy11440 _kqswh2mm _16jlkb7n _vchhusvi _u5f31ejb _1ul968cl _1bsbhwvj _ca0qu2gc _vwz4kb7n _p12f7l9q _uyzq116y _bud1116y _1x8f116y _wu7yyfq0 _ievayfq0 _c1r1yfq0 _ncc4116y _omua116y _1e29116y">
+                                        <h2 class="_1wyb1jqr _zg8l1kw7 _vwz41clk _k48pni7l _19pkpxbi _vchhusvi _syaz1fxt"> Thể loại</h2>
+                                      </div>
+                                      <div class="_16jlkb7n _1bsb1nrf _vchhusvi _17m2bgig _196m16np">
+                                        <div>
+                                          <div class="_1bsb1osq _18u0x0bf _19pkx0bf _1gzc1txw _auuz1h6o _6vgs1osq _1rjezwfg _osjgidpf _alyvidpf _pa3x12x7 _2g9bidpf">
+                                            <div class="sc-1u79nuj-0 fFzhmA">
+                                              <form>
+                                                <div class="css-q5x77e">
+                                                  <div class="css-1v0cd8t">
+                                                    <button aria-label="None- edit Category" type="button" class="css-g2hnkr"></button>
+                                                    <div class="css-u3i0v">
+                                                      <div class="_1e0c1txw _16jlkb7n _1o9zkb7n _i0dl1wug _1nmz1hna _kqswh2mm _vwz48sxn">
+                                                        <span class="_syaz1rc1">{{ selectedProject.taskType }}</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </details>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </ng-template>
+
+      </p-splitter>
+    </form>
+
+
+  </ng-container>
+</nz-modal>

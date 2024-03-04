@@ -1,0 +1,147 @@
+
+<app-user-layout></app-user-layout>
+
+<div class="css-7klh0i" id="ak-main-content">
+  <div class="h5xpn2-0 erfPlV">
+    <div class="_1e0c1txw _4t3i1osq _1bsb1osq">
+      <div class="_4t3i1osq _1e0c1ule _1yt4zdiv _vchhusvi _1bsb101u _16jlkb7n _1ul91fdn _18m915zi" style="--_3vrhrb: calc(100% - 392px)">
+        <div>
+          <div class="_1ul91nk9 _18s81r1l">
+            <div class="css-q0b2qn">
+              <div class="css-xxwux">
+                <div class="css-tw4vmx"></div>
+                <div class="css-auqgo3">
+                  <div class="css-cayjis">
+                    <div class="css-1eekove">
+                      <div class="css-13emw79">
+                        <h1 tabindex="-1" class="css-4g1bp3">Công việc của bạn</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <section class="sc-1fzefp1-0 iTjhUU">
+                    <div class="_1e0c1txw _1bah1yb4 _1yt41b41">
+                      <h2 class="sc-1fzefp1-1 eqtFbW">Dự án gần đây</h2>
+                      <a class="sc-1fzefp1-2 izznYQ" routerLink="/user/project-views" target="_self" >Xem tất cả dự án</a>
+                    </div>
+                    <div class="_1reo1wug _1ywu1ule _18postnw _32rxidpf _15l2xy5q _1x88idpf _z0ai1wqb _aetrb3bt _16r21198">
+                      <section class="_1e0c116y _o5721q9c _4t3i93m8 _1yt41a7l">
+
+                        <div class="sc-1p2gpiw-0 iCeFPj" *ngFor="let project of projects">
+                          <a class="sc-1p2gpiw-1 ktRddP"target="_self" >
+                            <span class="dlyzp1-1 gKKmlt">
+                              <img src="/assets/img/10418.svg" width="24px" height="24px" class="_1reo15vq _18m915vq _16jlidpf _1o9zidpf _i0dl1wug" />
+                            </span>
+                            <div class="sc-1p2gpiw-2 cEvSzd">
+                              <p  class="sc-1p2gpiw-3 hVfRVu">
+                                <a [routerLink]="['/user/work/'+ project.projectID]">{{ project.projectName }}</a>
+                              </p>
+                              <p class="_1wyb1skh _syaz1fxt _1dyziaom _19pkidpf _2hwxidpf _otyridpf _18u0idpf _1bto1l2s _1reo15vq _18m915vq _o5721q9c _1p1dglyw _k48p4jg8 _vwz4dlk8">
+                                Doanh nghiệp được quản lý theo nhóm
+                              </p>
+                            </div>
+                          </a>
+                          <div class="_16jlkb7n _1o9zkb7n _i0dlf1ug">
+                            <div class="sc-1p2gpiw-5 kqFRrR">
+                              <p class="sc-1p2gpiw-13 kBaqcC">Đường dẫn nhanh</p>
+                            </div>
+                            <div class="sc-1p2gpiw-5 kqFRrR">
+                              <a class="sc-1p2gpiw-14 VYfbg" target="_self" >
+                                <div role="presentation" class="_1reo15vq _18m915vq _16jlkb7n _1o9zkb7n _i0dlf1ug" >
+                                  <p class="sc-1p2gpiw-15 dWOPs"> Các vấn đề mở của tôi </p>
+                                </div>
+                                <div class="sc-1p2gpiw-16 bLkAGQ" ></div>
+                              </a>
+                            </div>
+                            <div class="sc-1p2gpiw-5 kqFRrR">
+                              <a class="sc-1p2gpiw-14 VYfbg" target="_self">
+                                <div role="presentation" class="_1reo15vq _18m915vq _16jlkb7n _1o9zkb7n _i0dlf1ug" >
+                                  <p class="sc-1p2gpiw-15 dWOPs" > Các vấn đề đã hoàn thành</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="sc-1p2gpiw-6 fSOZlH sc-1p2gpiw-5 kqFRrR">
+                            <button aria-expanded="false" aria-haspopup="true" class="sc-1p2gpiw-7 daPNYp css-8vysra" tabindex="0" type="button">
+                              <span class="css-1gd7hga">
+                                <p class="sc-1p2gpiw-4 bgxHlt" > 1 bảng</p>
+                                </span>
+                                <span class="css-10dsogl">
+                                  <span role="img" aria-label="board" class="css-1wits42" style=" --icon-primary-color: currentColor; --icon-secondary-color: var( --ds-surface, #ffffff );">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation" >
+                                    <path d="M8.292 10.293a1.009 1.009 0 000 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 000-1.419.987.987 0 00-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 00-1.406 0z" fill="currentColor" fill-rule="evenodd"></path>
+                                  </svg>
+                                </span>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+
+                      </section>
+                    </div>
+                  </section>
+
+                  <div class="_19pkidpf _2hwxidpf _otyridpf _18u0idpf _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf">
+                    <div>
+                      <div class="_18u0x0bf">
+                        <div class="css-xfp5fq">
+                          <div role="tablist" class="css-1o3ve72">
+                            <div style="width: 100%;" id="your-work-page-tabs-1" aria-controls="your-work-page-tabs-1-tab" aria-posinset="2" aria-selected="false" aria-setsize="4" role="tab" tabindex="-1" class="css-k5cxwk" >
+                              <nz-tabset>
+                                <span class="css-1yrqasy" style="color: inherit">
+                                  <nz-tab *ngFor="let tab of tabs" [nzTitle]="tab">
+                                    <ng-container *ngIf="tab === 'Làm việc trên'; else otherTabs">
+                                      <nz-table #nzTable [nzData]="tasks" nzTableLayout="fixed">
+                                        <thead>
+                                          <tr>
+                                            <th nzWidth="60px"></th>
+                                            <th [nzSortFn]="sortAgeFn"><span nz-icon nzType="snippets" nzTheme="outline"></span> Tên Dự án</th>
+                                            <th [nzSortFn]="sortAgeFn"> <span nz-icon nzType="exception" nzTheme="outline"></span> Tên công việc</th>
+                                            <th [nzSortFn]="sortAgeFn"> <span nz-icon nzType="bar-chart" nzTheme="outline"></span> Trạng thái</th>
+                                            <th [nzSortFn]="sortAgeFn"> <span nz-icon nzType="user" nzTheme="outline"></span> Người nhận công việc</th>
+                                            <th [nzSortFn]="sortAgeFn"> <span nz-icon nzType="reconciliation" nzTheme="outline"></span> Mô tả</th>
+                                            <th [nzSortFn]="sortAgeFn"> <span nz-icon nzType="calendar" nzTheme="outline"></span> Ngày tạo công việc</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <ng-container *ngFor="let data of tasks">
+                                            <tr>
+                                              <td [nzExpand]="expandSet.has(data.taskID)" [nzExpandIcon]="expandIcon"></td>
+                                              <td>{{ data.projectName  }}</td>
+                                              <td nzEllipsis>{{ data.summary }}</td>
+                                              <td>{{ data.status }}</td>
+                                              <td>{{ data.fullName }}</td>
+                                              <td nzEllipsis>{{ data.description }}</td>
+                                              <td>{{ data.createdDate | date: 'yyyy-MM-dd' }}</td>
+                                            </tr>
+                                            <tr [nzExpand]="expandSet.has(data.taskID)"> <span>{{ data.description }}</span></tr>
+                                            <ng-template #expandIcon>
+                                              <span nz-icon *ngIf="!expandSet.has(data.taskID)" nzType="star" nzTheme="outline" (click)="onExpandChange(data.taskID, true)"></span>
+                                              <span nz-icon *ngIf="expandSet.has(data.taskID)" nzType="minus-circle" nzTheme="outline" (click)="onExpandChange(data.taskID, false)" ></span>
+                                            </ng-template>
+                                          </ng-container>
+                                        </tbody>
+                                      </nz-table>
+                                    </ng-container>
+
+                                    <ng-template #otherTabs let-tabData>
+                                      <app-user-work-reports [tabContent]="tabData"></app-user-work-reports>
+                                    </ng-template>
+
+                                  </nz-tab>
+                                </span>
+                              </nz-tabset>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

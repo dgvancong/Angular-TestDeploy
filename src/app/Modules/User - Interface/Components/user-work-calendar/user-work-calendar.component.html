@@ -1,0 +1,40 @@
+
+<app-user-layout></app-user-layout>
+
+<div class="css-1btht9s">
+
+  <router-outlet></router-outlet>
+
+  <app-sidebar></app-sidebar>
+
+  <div class="_11q71j6p">
+
+    <app-heading></app-heading>
+
+    <div class="_kqswh2mm _154i14em">
+      <div class="_2d3f1oc1 _japi1mcq _iu1g1fl4 _fok81wug _q7c11wug">
+        <div class="css-7klh0i" id="ak-main-content">
+          <div id="jwm-container"class="_11q71j6p _vchhusvi _1e0c1txw _2lx21bp4 _1n261q9c _1bah1y6m _ca0qidpf _4t3i1osq _1tke1wug _u5f31tcg _n3td1tcg _19bv1tcg _1reo1wug _18m91wug">
+            <div class="_1e0c1txw _16jlkb7n _1o9zkb7n _i0dlf1ug _4cvr1fhb _4t3i1osq _80om73ad">
+              <div class="_syaz1c2q _1e0c1txw _2lx21bp4 _ca0qidpf _19bvidpf _1bsb1osq _u5f3idpf _n3tdidpf">
+                <!-- action -->
+                <app-user-work-avata></app-user-work-avata>
+                <nz-calendar (click)="showModal()" [(ngModel)]="selectedValue" (nzSelectChange)="selectChange($event)"></nz-calendar>
+                <nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+                  <ng-container *nzModalContent>
+                    <div>
+                      <label>Nội dung nhắc nhở:</label>
+                      <input type="text"/>
+                    </div>
+                  </ng-container>
+                </nz-modal>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

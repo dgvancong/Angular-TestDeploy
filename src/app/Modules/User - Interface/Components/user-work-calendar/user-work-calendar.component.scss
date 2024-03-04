@@ -1,0 +1,138 @@
+._11q71j6p {
+  background: #FFFFFF;
+  width: 100%;
+}
+._kqswh2mm {
+  position: relative;
+}
+._154i14em {
+  top: 95px;
+}
+._2d3f1oc1>:first-of-type {
+  width: calc(100vw - 0px - 240px - 0px - 0px ) !important;
+}
+._japi1mcq>:first-of-type {
+  height: calc(100vh - ( 56px + 0px ) - 95px);
+}
+._iu1g1fl4>:first-of-type {
+  transition: width .3s cubic-bezier(.2,0,0,1) 0s;
+}
+._fok81wug>:first-of-type {
+  overflow-x: auto;
+}
+._q7c11wug>:first-of-type {
+  overflow-y: auto;
+}
+._vchhusvi {
+  box-sizing: border-box;
+}
+._1e0c1txw, ._jcfo1txw:active, ._1d5x1txw:focus, ._hpcc1txw:hover {
+  display: flex;
+}
+._1e0c1txw {
+  display: flex;
+}
+._2lx21bp4 {
+  flex-direction: column;
+}
+._1n261q9c {
+  flex-wrap: nowrap;
+}
+._1bah1y6m {
+  justify-content: flex-start;
+}
+._ca0qidpf {
+  padding-top: 0;
+}
+._4t3i1osq {
+  height: 100%;
+}
+._1tke1wug {
+  min-height: auto;
+}
+._u5f31tcg {
+  padding-right: 24px;
+}
+._n3td1tcg {
+  padding-bottom: 24px;
+}
+._19bv1tcg {
+  padding-left: 24px;
+}
+._1reo1wug {
+  overflow-x: auto;
+}
+._18m91wug {
+  overflow-y: auto;
+}
+._16jlkb7n {
+  flex-grow: 1;
+}
+._1o9zkb7n {
+  flex-shrink: 1;
+}
+._i0dlf1ug {
+  flex-basis: 0%;
+}
+._4cvr1fhb {
+  align-items: stretch;
+}
+._80om73ad {
+  cursor: default;
+}
+._syaz1c2q {
+  color: #172B4D;
+}
+._19bvidpf {
+  padding-left: 0;
+}
+._1bsb1osq {
+  width: 100%;
+}
+._u5f3idpf {
+  padding-right: 0;
+}
+._n3tdidpf {
+  padding-bottom: 0;
+  width: 100%;
+}
+.css-1btht9s {
+  display: flex;
+  height: 100%;
+  position: relative;
+  grid-area: content;
+  padding-top: 56px;
+}
+/* app.component.css */
+.custom-date-cell {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.day {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.reminder {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #888;
+}
+
+.reminder-input {
+  margin-top: 20px;
+  display: none; /* Ẩn ô textbox ban đầu */
+}
+
+.reminder-input.active {
+  display: block; /* Hiện ô textbox khi có ngày được chọn */
+}
+.ant-modal-body {
+  min-height: 200px; /* hoặc một giá trị khác tùy thuộc vào nội dung của bạn */
+}

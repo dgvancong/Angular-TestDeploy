@@ -1,0 +1,559 @@
+<div class="_1e0c1txw _4cvr1h6o _zulpu2gc _1tke1ylp _18s8r2fv _1n261g80">
+  <div class="_1e0c1txw _4cvr1h6o _zulpu2gc _16jlkb7n _1o9zkb7n _i0dlf1ug">
+    <div class="_1e0c1txw">
+      <div class="sc-1xfxsty-0 jexNtp">
+        <div class="sc-1xfxsty-1 lbhKCW">
+          <div class="_6l8r13cp _x2xk13cp _sg3v13cp _w15a13cp _n8yfky8x _7n831c2q _1o8hu22k _n2ulgr9p">
+            <div role="presentation" class="ajs-dirty-warning-exempt css-w9huf">
+              <input type="text" name="search" placeholder="Tìm kiếm trong bảng" class="css-1cab8vv">
+              <div class="_18u0v77o _2hwxv77o">
+                <div class="_syazqjbk _18s81c8u _1e0c1txw">
+                  <span class="css-1wits42">
+                    <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                      <path d="M16.436 15.085l3.94 4.01a1 1 0 01-1.425 1.402l-3.938-4.006a7.5 7.5 0 111.423-1.406zM10.5 16a5.5 5.5 0 100-11 5.5 5.5 0 000 11z" fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <fieldset class="_19itidpf _18s8s8vo">
+      <legend id="assignee" class="_kqswstnw _4t3it94y _1bsbt94y _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _19itidpf _ogto7mnp _1reo15vq _18m915vq _o5721q9c"> Filter by assignee</legend>
+      <div class="_1e0c1txw _2lx2vrvc _4cvr1h6o">
+        <nz-avatar-group>
+          <nz-avatar style="color:#f56a00; background-color:#fde3cf;" *ngFor="let member of teamData" [nzIcon]="member.picture ? 'user' : undefined" [nzSrc]="member.picture" title="{{member.fullName}}"></nz-avatar>
+          <nz-avatar nzIcon="usergroup-add" (click)="showModal()" style="cursor: pointer;"></nz-avatar>
+        </nz-avatar-group>
+        <nz-modal [(nzVisible)]="isVisible" nzTitle="Thêm thành viên dự án" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+          <form #userForm="ngForm">
+            <ng-container *nzModalContent>
+              <div class="_otyr1ejb">
+                <div>
+                  <div class="css-q5x77e">
+                    <label for="teamID" class="css-1nzatiy">
+                      Chọn đội nhóm dự án :
+                      <span aria-hidden="true" title="required" class="css-twk84a">*</span></label>
+                    <div class="_kqswh2mm">
+                      <div role="presentation"class="css-1s25hsw">
+                        <nz-select id="teamID" name="teamID" [(ngModel)]="teammenber.teamID" required class="css-1cab8vv" nzShowSearch nzAllowClear nzPlaceHolder="Nhập tên người quản lý dự án của bạn ...">
+                          <nz-option *ngFor="let team of teams" [nzLabel]="team.teamName" [nzValue]="team.teamID"></nz-option>
+                        </nz-select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="_otyr1ejb">
+                <div>
+                  <div class="css-q5x77e">
+                    <label for="userID" class="css-1nzatiy">
+                      Chọn thành viên nhóm dự án :
+                      <span aria-hidden="true" title="required" class="css-twk84a">*</span></label>
+                    <div class="_kqswh2mm">
+                      <div role="presentation"class="css-1s25hsw">
+                        <nz-select id="userID" name="userID" [(ngModel)]="teammenber.userID" required class="css-1cab8vv" nzShowSearch nzAllowClear nzPlaceHolder="Nhập tên người quản lý dự án của bạn ...">
+                          <nz-option *ngFor="let user of users" [nzLabel]="user.fullName" [nzValue]="user.userID"></nz-option>
+                        </nz-select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="_otyr1ejb">
+                <div>
+                  <div class="css-q5x77e">
+                    <label for="roleID" class="css-1nzatiy">
+                      Phân loại quyền của thành viên:
+                      <span aria-hidden="true" title="required" class="css-twk84a">*</span>
+                    </label>
+                    <div class="_kqswh2mm">
+                      <div role="presentation" class="css-1s25hsw">
+                        <input nz-input id="roleID" name="roleID" [disabled]="true" value="{{ getRoleName(teammenber.roleID) }}" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="_otyr1ejb">
+                <div>
+                  <div class="css-q5x77e">
+                    <label for="joinDate" class="css-1nzatiy"> Ngày tham gia dự án :</label>
+                    <div class="_kqswh2mm">
+                      <div role="presentation"class="css-1s25hsw">
+                        <nz-date-picker [nzPlaceHolder]="'Ngày tham gia dự án'" [nzFormat]="dateFormat" [(ngModel)]="teammenber.joinDate" id="joinDate" name="joinDate" class="css-1cab8vv" required></nz-date-picker>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </form>
+        </nz-modal>
+      </div>
+    </fieldset>
+  </div>
+  <div class="_1e0c1txw _4cvr1h6o _zulpu2gc">
+    <div mat-button [matMenuTriggerFor]="share">
+      <div>
+        <button class="css-1yaiuar" tabindex="0" type="button">
+          <span class="css-4h66kx">
+            <span class="css-1wits42">
+              <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor" fill-rule="evenodd">
+                  <path
+                    d="M6 15a3 3 0 100-6 3 3 0 000 6zm0-2a1 1 0 110-2 1 1 0 010 2zm12-4a3 3 0 100-6 3 3 0 000 6zm0-2a1 1 0 110-2 1 1 0 010 2zm0 14a3 3 0 100-6 3 3 0 000 6zm0-2a1 1 0 110-2 1 1 0 010 2z"
+                    fill-rule="nonzero"></path>
+                  <path d="M7 13.562l8.66 5 1-1.732-8.66-5z"></path>
+                  <path d="M7 10.83l1 1.732 8.66-5-1-1.732z"></path>
+                </g>
+              </svg>
+            </span>
+          </span>
+          <span class="css-178ag6o">Chia Sẻ</span>
+        </button>
+      </div>
+    </div>
+    <mat-menu #share="matMenu">
+      <button mat-menu-item>
+        <div class="css-1iwuz3b">
+          <div class="assistive"></div>
+          <input tabindex="-1"
+            value="https://dongvancong24.atlassian.net/jira/core/projects/FIRST/board?atlOrigin=eyJpIjoiNTFlNTY1YTM5NzFhNDgzNjk3YzFlNmQ3YjJlYWUxNjMiLCJwIjoiaiJ9"
+            style="position: absolute; left: -9999px;">
+          <div role="presentation">
+            <button class="css-4iker0" tabindex="0" type="button">
+              <span class="css-4h66kx">
+                <span class="css-1afrefi">
+                  <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                    <g fill-rule="evenodd">
+                      <circle fill="currentColor" cx="12" cy="12" r="10"></circle>
+                      <path
+                        d="M11.75 16.15l.548-.537a.585.585 0 000-.838.61.61 0 00-.854 0l-.574.564c-.564.553-1.483.662-2.101.168a1.482 1.482 0 01-.119-2.223l1.694-1.663a1.543 1.543 0 012.156 0l.647.635.853-.839-.646-.635a2.775 2.775 0 00-3.863 0l-1.694 1.664a2.659 2.659 0 00.208 3.979c1.104.884 2.738.715 3.746-.275"
+                        fill="inherit"></path>
+                      <path
+                        d="M12.25 7.85l-.547.537a.585.585 0 000 .838.61.61 0 00.853 0l.574-.564c.564-.553 1.483-.662 2.101-.168.71.57.75 1.603.119 2.223l-1.694 1.663a1.543 1.543 0 01-2.156 0l-.647-.635-.853.839.646.635a2.775 2.775 0 003.863 0l1.695-1.664a2.659 2.659 0 00-.209-3.979c-1.104-.884-2.738-.715-3.746.275"
+                        fill="inherit"></path>
+                    </g>
+                  </svg>
+                </span>
+              </span>
+              <span class="css-178ag6o">Sao chép đường dẫn</span>
+            </button>
+          </div>
+          <div class="css-perdyb">
+            <div class="css-b672ny"></div>
+            <button class="css-8fhpv4" type="submit">
+              <span class="css-178ag6o">Chia sẻ</span>
+            </button>
+          </div>
+        </div>
+      </button>
+    </mat-menu>
+    <div mat-button [matMenuTriggerFor]="filter">
+      <button class="css-1yaiuar" tabindex="0" type="button">
+        <span class="css-4h66kx">
+          <span class="css-1wits42">
+            <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+              <path
+                d="M7 13h10l1-2H6zM3.993 6c-.548 0-.79.405-.546.895L4 8h16l.553-1.105C20.8 6.4 20.555 6 20.007 6H3.993zm6.785 11.556a.87.87 0 00.727.444h.99c.279 0 .605-.2.727-.444L14 16h-4l.778 1.556z"
+                fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="css-178ag6o">
+          <div class="_1e0c1txw _2lx2vrvc _zulp1b66 _4cvr1h6o">Lọc</div>
+        </span>
+      </button>
+    </div>
+    <mat-menu #filter="matMenu" class="mat-menu-panel-custom">
+      <div>
+        <div class="_11q71bhr _1pbykb7n _kqswh2mm _1yt4jd10 _1e0c1txw _1bah1yb4 _4cvr1h6o _1wyb1crf _16qsglyw">
+          <div class="_syaz1o15 _1p1dangw _k48p1fw0 _vwz41f4h">Bộ lọc</div>
+          <div class="_1e0c1txw _1bahesu3"></div>
+        </div>
+        <div class="_1reo1wug _18m91wug _ln19p27b _c71l16u6">
+          <div class="css-4mjcmd" style="min-width: 360px; max-width: 800px;">
+            <div class="_1e0c1txw _2lx21bp4 _1yt4x7n9">
+              <div class="_p12f1gwv">
+                <div>
+                  <button  class="_ymio1r31 _ypr0glyw _zcxs1o36 css-1m7bkbm" type="button" mat-menu-item>
+                    <span class="css-12dc8u4">
+                      <span class="css-1rnc8rc">
+                        <span aria-hidden="true" class="css-1afrefi">
+                          <svg role="presentation" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 3a9 9 0 014.78 16.627c-.154.19-.375.323-.628.361A8.978 8.978 0 0112 21a8.961 8.961 0 01-4.151-1.013.993.993 0 01-.628-.36A9 9 0 0112 3zm1 13h-2l-.15.006a2 2 0 00-1.844 1.837L9 18v.326c.91.432 1.927.674 3 .674a6.972 6.972 0 003-.674V18l-.005-.15a2 2 0 00-1.838-1.844L13 16zM12 5a7 7 0 00-4.88 12.02 4.004 4.004 0 013.673-3.015L11 14h2l.2.005a4.002 4.002 0 013.679 3.013A7 7 0 0012 5zm0 2a3 3 0 110 6 3 3 0 010-6zm0 2a1 1 0 100 2 1 1 0 000-2z"fill="currentColor"></path>
+                          </svg>
+                        </span>
+                      </span>
+                      <span class="css-1uww2tp">
+                        <span class="css-5mekwu">Giao cho tôi</span>
+                      </span>
+                    </span>
+                  </button>
+                  <button aria-pressed="false" class="_ymio1r31 _ypr0glyw _zcxs1o36 css-1m7bkbm" type="button" mat-menu-item>
+                    <span class="css-12dc8u4">
+                      <span class="css-1rnc8rc">
+                        <span aria-hidden="true" class="css-1afrefi">
+                          <svg role="presentation" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a1 1 0 012 0h4a1 1 0 112 0h1a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2V8a2 2 0 012-2h1zm6 2a1 1 0 102 0h1v2H7V8h1a1 1 0 002 0h4zm-7 4v4h10v-4H7z" fill="currentColor"></path>
+                          </svg>
+                        </span>
+                      </span>
+                      <span class="css-1uww2tp">
+                        <span class="css-5mekwu">Hạn trong tuần</span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="_p12f1gwv">
+            <div class="_x3do13y8 _18s81alc"></div>
+            <div class="_1e0c1txw _2lx21bp4 _zulp1f4h _n3td1f4h">
+              <div class="_1e0c1txw _2lx21bp4 _zulpu2gc">
+                <div class="css-xhdqsk">
+                  <div class="_1e0c1txw _4cvr1h6o _4t3i1tcg _dpd31txw _fwqe1bp4 _xlob1h6o _14hp1tcg _jq8g1tcg _1hbst94y _24rc1b66 _14de1txw">
+                    <span>Thể loại</span>
+                  </div>
+                </div>
+                <div class="_ca0qidpf _u5f3gktf _n3tdidpf _19bvgktf _1e0c1txw _2lx2vrvc _4cvr1h6o _zulp1b66 _1n261g80 _187z1w81 _1u921l2s _84c115vq _1h3c15vq _mq0p1q9c">
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button" aria-label="Công Đồng Văn">
+                          <img src="https://secure.gravatar.com/avatar/38b446d3d303d026338579fb257ab637?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCV-5.png" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button"aria-label="Alert Integration">
+                          <img src="https://secure.gravatar.com/avatar/675673c3f473815508441d00933b1752?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAI-3.png" alt="Alert Integration"class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button" aria-label="Atlassian Assist  ">
+                          <img src="https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5cb4ae0e4b97ab11a18e00c7/0c3fec9a-029d-422f-8586-89bc4ac2fe7e/48" alt="Atlassian Assist" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button"aria-label="Automation for Jira  ">
+                          <img src="https://secure.gravatar.com/avatar/600529a9c8bfef89daa848e6db28ed2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAJ-0.png" alt="Automation for Jira" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button"aria-label="danghungdang  ">
+                          <img src="https://secure.gravatar.com/avatar/097c08318395cde8d47e2ce3995774bd?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FD-2.png"alt="danghungdang" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button" aria-label="Atlassian Assist  ">
+                          <img src="https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5cb4ae0e4b97ab11a18e00c7/0c3fec9a-029d-422f-8586-89bc4ac2fe7e/48" alt="Atlassian Assist" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button"aria-label="Automation for Jira  ">
+                          <img src="https://secure.gravatar.com/avatar/600529a9c8bfef89daa848e6db28ed2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAJ-0.png" alt="Automation for Jira" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button"aria-label="danghungdang  ">
+                          <img src="https://secure.gravatar.com/avatar/097c08318395cde8d47e2ce3995774bd?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FD-2.png"alt="danghungdang" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button" aria-label="Atlassian Assist  ">
+                          <img src="https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5cb4ae0e4b97ab11a18e00c7/0c3fec9a-029d-422f-8586-89bc4ac2fe7e/48" alt="Atlassian Assist" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button"aria-label="Automation for Jira  ">
+                          <img src="https://secure.gravatar.com/avatar/600529a9c8bfef89daa848e6db28ed2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAJ-0.png" alt="Automation for Jira" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="presentation">
+                    <div class="_1e0c1txw _bhl914no _k8em14no">
+                      <div style="display: inline-block; position: relative; outline: 0px;">
+                        <button class="css-1f42l0d" type="button"aria-label="danghungdang  ">
+                          <img src="https://secure.gravatar.com/avatar/097c08318395cde8d47e2ce3995774bd?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FD-2.png"alt="danghungdang" class="css-13ep12v" style="border-radius: 50%;">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="_1e0c1txw _4cvr1h6o">
+                    <button class="_kqswh2mm _80omtlke _1e0c1txw _4cvr1h6o _1bsbzwfg _4t3izwfg _2rko1ssb _1h1tkb7n _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _1bah1h6o _zulp1b66 _syaz9o62 _19itidpf _bfhk1vhj _irr31p2u _184nidpf" style="--_1ws0oa9: var(--ds-background-neutral, #F4F5F7); --_15ptmaq: var(--ds-background-neutral-hovered, rgba(9, 30, 66, 0.08));">
+                      <span aria-hidden="true" class="css-1wits42">
+                        <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                          <g fill="currentColor" fill-rule="evenodd">
+                            <circle cx="5" cy="12" r="2"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <circle cx="19" cy="12" r="2"></circle>
+                          </g>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="css-xhdqsk">
+                  <div class="_1e0c1txw _4cvr1h6o _4t3i1tcg _dpd31txw _fwqe1bp4 _xlob1h6o _14hp1tcg _jq8g1tcg _1hbst94y _24rc1b66 _14de1txw">
+                    <span>Loại</span>
+                  </div>
+                </div>
+                <div class="_ca0qidpf _u5f3gktf _n3tdidpf _19bvgktf _1e0c1txw _2lx2vrvc _4cvr1h6o _zulp1b66 _1n261g80 _187z1w81 _1u921l2s _84c115vq _1h3c15vq _mq0p1q9c">
+                  <button class="_11q7glyw _19it13y8 _1yt4u2gc _u5f3utpp _1wybdlk8 _4t3izwfg _2rko1ul9 _1e0c1txw _4cvr1h6o _zulps09w _80omtlke _d0altlke">
+                      <svg viewBox="0 0 24 24" role="presentation" class="css-1dr55qw" style="color: var(--checkbox-background-color); fill: var(--checkbox-tick-color);">
+                        <g fill-rule="evenodd">
+                          <rect fill="currentColor" x="6" y="6" width="12" height="12" rx="2"></rect>
+                        </g>
+                      </svg> Không nhãn hiệu
+                  </button>
+                </div>
+              </div>
+              <div class="_1e0c1txw _2lx21bp4 _zulpu2gc">
+                <div class="css-xhdqsk">
+                  <div class="_1e0c1txw _4cvr1h6o _4t3i1tcg _dpd31txw _fwqe1bp4 _xlob1h6o _14hp1tcg _jq8g1tcg _1hbst94y _24rc1b66 _14de1txw">
+                    <span>Các loại vấn đề</span>
+                  </div>
+                </div>
+                <div class="_ca0qidpf _u5f3gktf _n3tdidpf _19bvgktf _1e0c1txw _2lx2vrvc _4cvr1h6o _zulp1b66 _1n261g80 _187z1w81 _1u921l2s _84c115vq _1h3c15vq _mq0p1q9c">
+                  <button mat-menu-item aria-pressed="false" class="_1yt418iy _4t3i1f4h _2rko1ul9 _19itglyw _1e0c1txw _4cvr1h6o _zulp1y44 _80omtlke _1wybdlk8 _1hilglyw _1yh7glyw _1fididpf _mpayidpf _q8ypidpf _1q3lidpf _syazaj1x _bfhk1s4m _irr3yw9d">
+                    <div style="display: inline-block; position: relative; outline: 0px;">
+                      <span class="css-1joy4tb">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+                          <title>Nhiệm vụ</title>
+                          <desc>Created with Sketch.</desc>
+                          <defs/>
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                              <g id="task" sketch:type="MSArtboardGroup">
+                                  <g id="Task" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+                                      <rect id="Rectangle-36" fill="#4BADE8" sketch:type="MSShapeGroup" x="0" y="0" width="14" height="14" rx="2"/>
+                                      <g id="Page-1" transform="translate(4.000000, 4.500000)" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" sketch:type="MSShapeGroup">
+                                          <path d="M2,5 L6,0" id="Stroke-1"/>
+                                          <path d="M2,5 L0,3" id="Stroke-3"/>
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                    </span>
+                    </div>
+                    <span>Nhiệm vụ</span>
+                  </button>
+                </div>
+              </div>
+              <div class="_1e0c1txw _2lx21bp4 _zulpu2gc">
+                <div class="css-xhdqsk">
+                  <div class="_1e0c1txw _4cvr1h6o _4t3i1tcg _dpd31txw _fwqe1bp4 _xlob1h6o _14hp1tcg _jq8g1tcg _1hbst94y _24rc1b66 _14de1txw">
+                    <span>Sự ưu tiên</span>
+                  </div>
+                </div>
+                <div class="_ca0qidpf _u5f3gktf _n3tdidpf _19bvgktf _1e0c1txw _2lx2vrvc _4cvr1h6o _zulp1b66 _1n261g80 _187z1w81 _1u921l2s _84c115vq _1h3c15vq _mq0p1q9c">
+                  <div role="presentation">
+                    <button class="_ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _4t3i1f4h _1bsb1f4h _19itglyw _2rko1y44 _1e0c1txw _4cvr1h6o _80omtlke _1cr6idpf _1hlx1wug _1874idpf _10ew1wug _bfhk1kw7 _irr3yw9d">
+                      <img src="https://dongvancong24.atlassian.net/images/icons/priorities/highest.svg" width="24px" height="24px" alt="" class="_1reo15vq _18m915vq _16jlidpf _1o9zidpf _i0dl1wug">
+                    </button>
+                  </div>
+                  <div role="presentation">
+                    <button class="_ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _4t3i1f4h _1bsb1f4h _19itglyw _2rko1y44 _1e0c1txw _4cvr1h6o _80omtlke _1cr6idpf _1hlx1wug _1874idpf _10ew1wug _bfhk1kw7 _irr3yw9d" aria-describedby="387val-tooltip">
+                      <img src="https://dongvancong24.atlassian.net/images/icons/priorities/high.svg" width="24px" height="24px" alt="" class="_1reo15vq _18m915vq _16jlidpf _1o9zidpf _i0dl1wug">
+                    </button>
+                  </div>
+                  <div role="presentation">
+                    <button class="_ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _4t3i1f4h _1bsb1f4h _19itglyw _2rko1y44 _1e0c1txw _4cvr1h6o _80omtlke _1cr6idpf _1hlx1wug _1874idpf _10ew1wug _bfhk1kw7 _irr3yw9d" aria-describedby="388val-tooltip"><img src="https://dongvancong24.atlassian.net/images/icons/priorities/medium.svg" width="24px" height="24px" alt="" class="_1reo15vq _18m915vq _16jlidpf _1o9zidpf _i0dl1wug">
+                    </button>
+                  </div>
+                  <div role="presentation">
+                    <button class="_ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _4t3i1f4h _1bsb1f4h _19itglyw _2rko1y44 _1e0c1txw _4cvr1h6o _80omtlke _1cr6idpf _1hlx1wug _1874idpf _10ew1wug _bfhk1kw7 _irr3yw9d">
+                      <img src="https://dongvancong24.atlassian.net/images/icons/priorities/low.svg" width="24px" height="24px" alt="" class="_1reo15vq _18m915vq _16jlidpf _1o9zidpf _i0dl1wug">
+                    </button>
+                  </div>
+                  <div role="presentation">
+                    <button class="_ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _4t3i1f4h _1bsb1f4h _19itglyw _2rko1y44 _1e0c1txw _4cvr1h6o _80omtlke _1cr6idpf _1hlx1wug _1874idpf _10ew1wug _bfhk1kw7 _irr3yw9d" aria-describedby="390val-tooltip">
+                      <img src="https://dongvancong24.atlassian.net/images/icons/priorities/lowest.svg" width="24px" height="24px" alt="" class="_1reo15vq _18m915vq _16jlidpf _1o9zidpf _i0dl1wug">
+                      </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="_1e0c1txw _2lx21bp4 _zulpidpf _n3tdidpf">
+              <div class="_18s8119w">
+                <div class="_x3do13y8 _1yt4r2fv">
+                  <div class="_1e0c1txw _4cvr1h6o _xlob1h6o _1gflidpf _yhjmidpf _1gqnidpf _11lvidpf _dpd31txw _19cnkb7n _a86jkb7n _1f8lf1ug _wbnz1e5h _sutwidpf _2ltfidpf _1dr2idpf _1i7ridpf _gumd1txw _1q0j1yb4 _14881h6o _rehaidpf _1bnaidpf _1e1oidpf _1ad8idpf">
+                    <button class="css-1pifu9q" type="button">
+                      <span class="css-178ag6o">
+                        <div class="css-xhdqsk">Phóng viên</div>
+                        <span role="img" aria-label="Expand custom fields" class="css-snhnyn"style="--icon-primary-color: currentColor; --icon-secondary-color: var(--ds-surface, #FFFFFF);">
+                          <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                            <path d="M8.292 10.293a1.009 1.009 0 000 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 000-1.419.987.987 0 00-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 00-1.406 0z" fill="currentColor" fill-rule="evenodd"></path>
+                          </svg>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-menu>
+
+    <div mat-button [matMenuTriggerFor]="gruopby">
+      <button class="css-1yaiuar" tabindex="0" type="button">
+        <span class="css-4h66kx">
+          <span aria-hidden="true" class="css-1wits42">
+            <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+              <path
+                d="M6 12c0-.552.456-1 1.002-1h9.996a.999.999 0 110 2H7.002A.999.999 0 016 12zm0 4c0-.552.456-1 1.002-1h9.996a.999.999 0 110 2H7.002A.999.999 0 016 16zm0-8c0-.552.456-1 1.002-1h9.996a.999.999 0 110 2H7.002A.999.999 0 016 8z"
+                fill="currentColor"></path>
+            </svg>
+          </span>
+        </span>
+        <span class="css-178ag6o">Nhóm theo: Trạng thái</span>
+      </button>
+    </div>
+    <mat-menu #gruopby="matMenu">
+      <div class="css-nqshte" role="group">
+        <div class="css-xhdqsk">Phân loại ưu tiên</div>
+        <button class="css-1m7bkbm" type="button" mat-menu-item>
+          <span class="css-12dc8u4">
+            <span class="css-1rnc8rc">
+              <img src="/assets/avatar/lowest.svg" width="18" height="18">
+            </span>
+            <span class="css-1uww2tp">
+              <span class="css-5mekwu">Lowest</span>
+            </span>
+          </span>
+        </button>
+        <button class="css-1m7bkbm" type="button" mat-menu-item>
+          <span class="css-12dc8u4">
+            <span class="css-1rnc8rc">
+              <img src="/assets/avatar/low.svg" width="18" height="18">
+            </span>
+            <span class="css-1uww2tp">
+              <span class="css-5mekwu">Low</span>
+            </span>
+          </span>
+        </button>
+        <button class="css-1m7bkbm" type="button" mat-menu-item>
+          <span class="css-12dc8u4">
+            <span class="css-1rnc8rc">
+              <img src="/assets/avatar/medium.svg" width="18" height="18">
+            </span>
+            <span class="css-1uww2tp">
+              <span class="css-5mekwu">Medium</span>
+            </span>
+          </span>
+        </button>
+        <button type="button" mat-menu-item>
+          <span class="css-12dc8u4">
+            <span class="css-1rnc8rc">
+              <img src="/assets/avatar/high.svg" width="18" height="18">
+            </span>
+            <span class="css-1uww2tp">
+              <span class="css-5mekwu">High</span>
+            </span>
+          </span>
+        </button>
+
+        <button type="button" mat-menu-item>
+          <span class="css-12dc8u4">
+            <span class="css-1rnc8rc">
+              <img src="/assets/avatar/highest.svg" width="18" height="18">
+            </span>
+            <span class="css-1uww2tp">
+              <span class="css-5mekwu">Highest</span>
+            </span>
+          </span>
+        </button>
+      </div>
+    </mat-menu>
+
+    <div mat-button [matMenuTriggerFor]="more">
+      <button class="css-1yaiuar" type="button">
+        <span class="css-4h66kx">
+          <span class="css-1wits42">
+            <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+              <g fill="currentColor" fill-rule="evenodd">
+                <circle cx="5" cy="12" r="2"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+                <circle cx="19" cy="12" r="2"></circle>
+              </g>
+            </svg>
+          </span>
+        </span>
+        <span class="css-178ag6o">Tùy chọn</span>
+      </button>
+    </div>
+    <mat-menu #more="matMenu">
+      <div class="css-xhdqsk">Chọn chức năng</div>
+      <button class="css-1m7bkbm" type="button" mat-menu-item>
+        <span class="css-12dc8u4">
+          <span nz-icon nzType="file-jpg" nzTheme="outline"></span>
+          <span class="css-1uww2tp">
+            <span class="css-5mekwu">Xuất dạng JSON</span>
+          </span>
+        </span>
+      </button>
+      <button class="css-1m7bkbm" type="button" mat-menu-item>
+        <span class="css-12dc8u4">
+          <span nz-icon nzType="file-excel" nzTheme="outline"></span>
+          <span class="css-1uww2tp">
+            <span class="css-5mekwu" (click)="downloadExcel()">Xuất dạng CSV</span>
+          </span>
+        </span>
+      </button>
+      <button class="css-1m7bkbm" type="button" mat-menu-item>
+        <span class="css-12dc8u4">
+          <span nz-icon nzType="qrcode" nzTheme="outline"></span>
+          <span class="css-1uww2tp">
+            <span class="css-5mekwu">Hiển thị mã QR</span>
+          </span>
+        </span>
+      </button>
+    </mat-menu>
+  </div>
+</div>
