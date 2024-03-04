@@ -1092,20 +1092,15 @@ form button {
 form button:hover {
   background-color: #0056b3;
 }
-
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-
-/* Style the date pickers */
 nz-date-picker {
   width: 100%;
   margin-bottom: 10px;
 }
-
-/* Optional: Adjust the border and padding for a cleaner look */
 nz-date-picker input {
   border: 1px solid #ccc;
   border-radius: 4px;
